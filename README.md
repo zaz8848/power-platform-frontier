@@ -2,13 +2,21 @@
 
 Curated briefings and resources on **Microsoft Power Platform** and the **Copilot Studio** agentic stack.
 
-## 📊 Live Deck
+**[▶ Browse everything](https://zaz8848.github.io/power-platform-frontier/)**
 
-**[▶ Open the presentation](https://zaz8848.github.io/power-platform-frontier/)**
+## 📚 Contents
 
-### Copilot Studio — Full Picture (V9)
+| Resource | Format | Language | Link |
+|---|---|---|---|
+| **Copilot Studio — Full Picture** (as of 2026-08) | 29-slide deck, ~40 min | 简体中文 | [Open](https://zaz8848.github.io/power-platform-frontier/decks/copilot-studio-2026-08/) |
 
-A 29-slide briefing on what Copilot Studio has become in 2026: an enterprise agentic platform built from **Apps, Agents, and Workflows**, powered by three coexisting harnesses.
+More resources will be added over time.
+
+---
+
+## Copilot Studio — Full Picture
+
+A briefing on what Copilot Studio has become in 2026: an enterprise agentic platform built from **Apps, Agents, and Workflows**, powered by three coexisting harnesses.
 
 It answers four questions:
 
@@ -19,7 +27,7 @@ It answers four questions:
 | **Q3** | What do the capabilities and roadmap look like? | Capabilities — Agents, Apps, Workflows |
 | **Q4** | How is it priced, and how do you control cost? | Billing — usage-based credits and two-tier quotas |
 
-## 🎛 How to use
+### How to use
 
 | Action | Control |
 |---|---|
@@ -32,18 +40,22 @@ It answers four questions:
 
 Presenter mode includes **paced speaker notes** with suggested pause points (⏸) and emphasis markers, plus a one-click export of the entire deck and script for use with a realtime voice assistant.
 
-## 📁 Contents
+## 📁 Repository layout
 
 ```
-index.html                 Self-contained deck (all styles, scripts, and images inlined)
-demo-copilot-studio.mp4    Product demo clip used on the DEMO slide
+index.html                              Landing page — index of all resources
+decks/
+  copilot-studio-2026-08/
+    index.html                          Self-contained deck (styles, scripts, images inlined)
+    demo-copilot-studio.mp4             Product demo clip used on the DEMO slide
 ```
+
+Each resource lives in its own folder and is self-contained — open its `index.html` in any modern browser, no build step or server required.
 
 ## 📝 Notes
 
-- The deck is **self-contained** — open `index.html` in any modern browser, no build step or server required.
-- Content is in **Simplified Chinese**.
-- Figures and claims are sourced from Microsoft's public Copilot Studio product update materials. Feature availability (GA / Preview / roadmap) reflects the state as of **August 2026** and changes over time — always verify against the current official documentation before relying on it.
+- Content is sourced from Microsoft's public Copilot Studio product update materials.
+- Feature availability (GA / Preview / roadmap) reflects the state at the time of writing and changes over time — always verify against the [current official documentation](https://learn.microsoft.com/microsoft-copilot-studio/) before relying on it.
 
 ## 📄 License
 
