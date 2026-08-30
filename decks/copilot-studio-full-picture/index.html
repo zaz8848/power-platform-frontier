@@ -9487,25 +9487,11 @@
         </div>
         <div class="tb-right">
             <button class="btn" id="overviewBtn">总览</button>
-            <button class="btn" id="pagesBtn">页面</button>
-            <button class="btn" id="presenterBtn">演讲者</button>
-            <button class="btn" id="rationaleBtn">查看思路</button>
             <button class="btn" id="fullBtn">全屏</button>
         </div>
     </div>
 
-    <section id="pm" aria-hidden="true">
-        <div class="ov-head">
-            <h2 id="pmH">页面管理</h2>
-            <div class="pm-acts">
-                <button class="btn" id="pmAll">全部显示</button>
-                <button class="btn" id="pmReset">恢复默认</button>
-                <button class="btn" id="pmClose">关闭 (Esc)</button>
-            </div>
-        </div>
-        <p class="pm-tip">点一行即可隐藏 / 恢复。<b>隐藏不会删除内容</b>，页码与总数会自动重排；设置只保存在这台电脑的浏览器里。</p>
-        <div class="pm-list" id="pmList"></div>
-    </section>
+    
 
     <section id="ov" aria-hidden="true">
         <div class="ov-head">
@@ -11073,66 +11059,68 @@
                     show(parseInt(b.dataset.go)); ov.classList.remove('on');
                 });
             }
-            function toggleOv() { ov.classList.toggle('on'); }
+            function toggleOv() { if (ov) ov.classList.toggle('on'); }
             const $ = id => document.getElementById(id);
-            $('overviewBtn').onclick = toggleOv;
-            $('ovClose').onclick = () => ov.classList.remove('on');
+            const on = (id, fn) => { const el = $(id); if (el) el.onclick = fn; };
+            on('overviewBtn', toggleOv);
+            on('ovClose', () => ov && ov.classList.remove('on'));
 
-            /* ---------- 页面管理 ---------- */
+            /* ---------- 页面管理（发布版会被剥离） ---------- */
             const pm = $('pm'), pmList = $('pmList'), pmH = $('pmH');
-            function pmRender() {
-                let n = 0;
-                pmList.innerHTML = PageVis.all.map(function (s) {
-                    const off = PageVis.isHidden(s);
-                    if (!off) n++;
-                    return '<button type="button" class="pm-row' + (off ? ' off' : '') + '" data-key="' + s.key + '">'
-                        + '<span class="pm-eye">' + (off ? '✕' : '👁') + '</span>'
-                        + '<span class="pm-num">' + (off ? '—' : String(n).padStart(2, '0')) + '</span>'
-                        + '<span class="pm-name">' + s.title + '</span>'
-                        + (off ? '<span class="pm-flag">已隐藏</span>' : '') + '</button>';
-                }).join('');
-                const h = PageVis.count();
-                pmH.textContent = '页面管理 · 共 ' + PageVis.all.length + ' 页'
-                    + (h ? '，已隐藏 ' + h + ' 页' : '，全部显示');
+            if (pm && pmList) {
+                var pmRender = function () {
+                    let n = 0;
+                    pmList.innerHTML = PageVis.all.map(function (s) {
+                        const off = PageVis.isHidden(s);
+                        if (!off) n++;
+                        return '<button type="button" class="pm-row' + (off ? ' off' : '') + '" data-key="' + s.key + '">'
+                            + '<span class="pm-eye">' + (off ? '✕' : '👁') + '</span>'
+                            + '<span class="pm-num">' + (off ? '—' : String(n).padStart(2, '0')) + '</span>'
+                            + '<span class="pm-name">' + s.title + '</span>'
+                            + (off ? '<span class="pm-flag">已隐藏</span>' : '') + '</button>';
+                    }).join('');
+                    const h = PageVis.count();
+                    pmH.textContent = '页面管理 · 共 ' + PageVis.all.length + ' 页'
+                        + (h ? '，已隐藏 ' + h + ' 页' : '，全部显示');
+                };
+                var pmApply = function () {
+                    PageVis.save();
+                    try { sessionStorage.setItem('v9ResumeKey', (slides[idx] || {}).dataset?.key || ''); } catch (e) { }
+                    location.reload();
+                };
+                on('pagesBtn', () => { pmRender(); pm.classList.add('on'); });
+                on('pmClose', pmApply);
+                on('pmAll', () => { PageVis.all.forEach(s => PageVis.set(s.key, false)); pmApply(); });
+                on('pmReset', () => { PageVis.reset(); pmApply(); });
+                pmList.addEventListener('click', e => {
+                    const row = e.target.closest('.pm-row');
+                    if (!row) return;
+                    const s = PageVis.all.find(x => x.key === row.dataset.key);
+                    if (!s) return;
+                    PageVis.set(s.key, !PageVis.isHidden(s));
+                    pmRender();
+                });
+                try {
+                    const rk = sessionStorage.getItem('v9ResumeKey');
+                    sessionStorage.removeItem('v9ResumeKey');
+                    if (rk) {
+                        const i = slides.findIndex(s => s.dataset.key === rk);
+                        if (i > 0) show(i);
+                    }
+                } catch (e) { }
             }
-            function pmApply() {
-                PageVis.save();
-                try { sessionStorage.setItem('v9ResumeKey', (slides[idx] || {}).dataset?.key || ''); } catch (e) { }
-                location.reload();
-            }
-            $('pagesBtn').onclick = () => { pmRender(); pm.classList.add('on'); };
-            $('pmClose').onclick = pmApply;
-            $('pmAll').onclick = () => { PageVis.all.forEach(s => PageVis.set(s.key, false)); pmApply(); };
-            $('pmReset').onclick = () => { PageVis.reset(); pmApply(); };
-            pmList.addEventListener('click', e => {
-                const row = e.target.closest('.pm-row');
-                if (!row) return;
-                const s = PageVis.all.find(x => x.key === row.dataset.key);
-                if (!s) return;
-                PageVis.set(s.key, !PageVis.isHidden(s));
-                pmRender();
-            });
-            /* 重载后回到原页 */
-            try {
-                const rk = sessionStorage.getItem('v9ResumeKey');
-                sessionStorage.removeItem('v9ResumeKey');
-                if (rk) {
-                    const i = slides.findIndex(s => s.dataset.key === rk);
-                    if (i > 0) show(i);
-                }
-            } catch (e) { }
-            $('presenterBtn').onclick = () => $('pbtn').click();
-            $('rationaleBtn').onclick = () => { const d = $('director'); if (d) d.classList.add('on'); };
-            $('fullBtn').onclick = () => document.fullscreenElement
-                ? document.exitFullscreen() : document.documentElement.requestFullscreen?.();
+            on('presenterBtn', () => { const b = $('pbtn'); if (b) b.click(); });
+            on('rationaleBtn', () => { const d = $('director'); if (d) d.classList.add('on'); });
+            on('fullBtn', () => document.fullscreenElement
+                ? document.exitFullscreen() : document.documentElement.requestFullscreen?.());
             addEventListener('keydown', e => {
                 if (document.body.classList.contains('presenting')) return;
                 const k = e.key.toLowerCase();
                 if (k === 'o') { e.preventDefault(); toggleOv(); }
                 else if (k === 'r') { e.preventDefault(); const d = $('director'); if (d) d.classList.add('on'); }
                 else if (e.key === 'Escape') {
-                    if (pm.classList.contains('on')) { e.preventDefault(); pmApply(); return; }
-                    ov.classList.remove('on');
+                    if (pm && pm.classList.contains('on')) { e.preventDefault(); pmApply(); return; }
+                    if (ov) ov.classList.remove('on');
                 }
             });
         })();
@@ -11271,80 +11259,6 @@
 
     </script>
 
-    <button id="pbtn" title="Presenter 口播模式（P）">🎙 Presenter</button>
-    <div id="presenter">
-        <div class="pr-bar">
-            <b>🎙 Presenter</b>
-            <span class="pos" id="prPos">01 / 29</span>
-            <button id="prPrev">← 上一页</button>
-            <button id="prNext">下一页 →</button>
-            <span class="sp"></span>
-            <button id="prFontDown">A−</button>
-            <button id="prFontUp">A+</button>
-            <button id="prCopy">复制整套给 GPT Realtime</button>
-            <button id="prDir">查看思路</button>
-            <button id="prClose">退出 (Esc)</button>
-        </div>
-        <div class="pr-top" id="prTop"><iframe id="prFrame"></iframe></div>
-        <div class="pr-vsplit" id="prVSplit"></div>
-        <div class="pr-bot">
-            <div class="pr-notes" id="prNotes"></div>
-            <div class="pr-hsplit" id="prHSplit"></div>
-            <div class="pr-next">
-                <div class="pr-tt">Next · 下一页</div>
-                <div class="pr-nextcard"><iframe id="prNextFrame"></iframe></div>
-                <div class="pr-nexttitle" id="prNextTitle"></div>
-                <div class="pr-nextnote" id="prNextNote"></div>
-            </div>
-        </div>
-    </div>
-    <div id="director">
-        <div class="dir-w" style="position:relative">
-            <button id="dirClose" class="dir-close"
-                style="padding:6px 12px;border-radius:8px;border:1px solid #2e3b58;background:#1b2438;color:#cfdcf5;font:700 12.5px/1 inherit;cursor:pointer">关闭</button>
-            <h3>制作思路 · 导演解说层</h3>
-            <p style="color:#7f95bd;font-size:13px">这一层写给「要复用这套结构的人」，不是讲稿。讲稿在 Presenter 主区。</p>
-
-            <h4>六幕结构：为什么按这个顺序讲</h4>
-            <ol>
-                <li><b>第 1–4 页 · 起</b>：先讲「人的需求变了」，再讲产品。<b>不从功能开场</b>，因为听众关心的是"为什么现在要看这个"。第 4 页把主动权交给
-                    Demo，是刻意让听众先建立感性认识，再听解释。</li>
-                <li><b>第 5–11 页 · 承（Harness）</b>：Demo 之后立刻回答"它凭什么"。顺序是 <b>换了哪层 → 换了能干什么 → harness 到底是什么 → 怎么分流 →
-                        典型场景</b>。先给结论再给定义，是为了避免开头就抛术语。</li>
-                <li><b>第 12–15 页 ·
-                        转（Platform）</b>：镜头拉远看全景，再用数据坐实"更强"，最后回答"能不能用我的模型"这个高频提问。<b>数据页必须放在概念之后</b>，否则听众不知道数字在证明什么。</li>
-                <li><b>第 16–22 页 · 展（Capabilities）</b>：Agent → App → Workflow。Agent 先用 RFP
-                    场景切入而不是列功能，是因为<b>共鸣先于信息</b>。Workflow 用实拍图，是因为"结构化 + AI 混编"这件事说不清楚，看一眼就懂。</li>
-                <li><b>第 23–28 页 · 合（Billing）</b>：主动把钱摆上桌。顺序是 <b>三条差异 → 官方明细 → 什么时候扣 → 怎么算 →
-                        怎么管</b>。最后一页专治"会不会失控"的顾虑——<b>顾虑不消除，前面讲得再好也签不下来</b>。</li>
-                <li><b>第 29 页 · 收</b>：三句话，对应全场三个主问题。</li>
-            </ol>
-            <h4>视觉规则</h4>
-            <ul>
-                <li>固定 1920×1080 Stage 等比缩放；<b>一页一个主要判断</b>，屏幕低密度、讲稿高完整。</li>
-                <li>四个分段封面（Part 01–04）用深色渐变，作为<b>节奏断点</b>——给听众换气，也给讲者调整语速的机会。</li>
-                <li>页码由脚本自动生成，<b>调整页序不需要改任何页码</b>。</li>
-                <li>配色克制：一页原则上只用<b>一个强调色</b>；对比表用中性灰打底、单一强调色点睛，不堆五颜六色。</li>
-                <li>左下角 KEY 标记（如 <code>arch-changed</code>）便于讲者和维护者快速定位页面。</li>
-            </ul>
-            <h4>口播节奏规则</h4>
-            <ul>
-                <li>讲稿中的 <span class="pz">⏸ 停 N 秒</span> 是<b>建议停顿点</b>，不是装饰。三种用途：让关键判断落地、给听众看图的时间、在抛出顾虑后让它先浮出来。</li>
-                <li><b>加粗处 = 重音</b>。一页里加粗不超过 5 处，多了等于没有重点。</li>
-                <li>每页顶部标了<b>建议时长</b>，29 页合计约 40 分钟（不含 Demo 视频时长）。</li>
-                <li>需要即兴压缩时，优先砍分段封面和 <code>agent-loop</code>、<code>wf-nodes</code> 两页；<b>不要砍</b>
-                    <code>arch-changed</code>、<code>scenario-split</code>、<code>govern-spend</code>。
-                </li>
-            </ul>
-            <h4>可复用公式</h4>
-            <p>每页 = <b>抓</b>（一句让人抬头的话）+ <b>立</b>（这页唯一的判断）+ <b>带</b>（带着听众看具体位置）+ <b>证</b>（数据 / 截图 / 官方来源）+
-                <b>转</b>（把问题递给下一页）。<br>
-                整场 = 抓 · 立 · 带 · 证 · 转 · <b>收</b>。
-            </p>
-
-        </div>
-    </div>
-
-</body>
+    </body>
 
 </html>
