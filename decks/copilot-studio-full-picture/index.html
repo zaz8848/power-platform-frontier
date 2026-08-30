@@ -2597,6 +2597,151 @@
         }
 
         /* ---------- demo 视频页 ---------- */
+        .dproof {
+            margin-top: 12px;
+            padding: 10px 20px;
+            border-radius: 16px;
+            background: linear-gradient(160deg, #f2f7ff, #f9f2fb);
+            border: 1px solid rgba(43, 127, 255, .26);
+            display: grid;
+            grid-template-columns: 250px 1fr 290px;
+            gap: 20px;
+            align-items: center
+        }
+
+        .slide[data-key="demo"] .demo {
+            margin-top: 12px
+        }
+
+        .slide[data-key="demo"] .demo-r video {
+            max-height: 500px
+        }
+
+        .dp-l {
+            display: flex;
+            align-items: center;
+            gap: 12px
+        }
+
+        .dp-big {
+            font-size: 38px;
+            font-weight: 900;
+            color: #12a150;
+            line-height: 1;
+            white-space: nowrap
+        }
+
+        .dp-big i {
+            font-style: normal;
+            font-size: 18px;
+            margin-left: 2px
+        }
+
+        .dp-lbl b {
+            display: block;
+            font-size: 15.5px;
+            font-weight: 900
+        }
+
+        .dp-lbl span {
+            display: block;
+            font-size: 12.5px;
+            color: var(--dim);
+            margin-top: 2px
+        }
+
+        .dp-tag {
+            font-size: 12px;
+            color: #97a3b5;
+            margin-bottom: 7px
+        }
+
+        .dpv {
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 6px
+        }
+
+        .dpv-k {
+            font-size: 14px;
+            font-weight: 800;
+            text-align: right
+        }
+
+        .dpv-k small {
+            display: block;
+            font-size: 11px;
+            font-weight: 600;
+            color: var(--dim)
+        }
+
+        .dpbar {
+            position: relative;
+            display: block;
+            height: 19px;
+            border-radius: 999px;
+            background: linear-gradient(90deg, #2b7fff, #8b5cf6);
+            width: var(--w)
+        }
+
+        .dpbar.dim {
+            background: #c3ccda
+        }
+
+        .dpbar b {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 12.5px;
+            color: #fff
+        }
+
+        .dp-side {
+            display: flex;
+            flex-direction: column;
+            gap: 7px;
+            padding-left: 20px;
+            border-left: 1px dashed rgba(43, 127, 255, .35)
+        }
+
+        .dps {
+            display: flex;
+            align-items: baseline;
+            gap: 9px
+        }
+
+        .dps b {
+            font-size: 22px;
+            font-weight: 900;
+            color: #12a150;
+            white-space: nowrap
+        }
+
+        .dps b i {
+            font-style: normal;
+            font-size: 12px
+        }
+
+        .dps.down b {
+            color: #2b7fff
+        }
+
+        .dps span {
+            font-size: 12.5px;
+            color: var(--dim);
+            line-height: 1.3
+        }
+
+        .dps em {
+            display: block;
+            font-style: normal;
+            font-size: 11px;
+            color: #97a3b5
+        }
+
         .demo {
             margin-top: 16px;
             flex: 1;
@@ -9396,6 +9541,23 @@
                             playsinline=""></video>
                     </div>
                 </div>
+                <div class="dproof rise">
+                    <div class="dp-l">
+                        <div class="dp-big">+29<i>pts</i></div>
+                        <div class="dp-lbl"><b>正面赢过领先竞品</b><span>业务流程自动化 · 评估通过率</span></div>
+                    </div>
+                    <div class="dp-bars">
+                        <div class="dp-tag">同一套最难评估集 · 零售数据集 · 同一模型基线 Sonnet 4.6</div>
+                        <div class="dpv"><span class="dpv-k">GitHub Copilot harness</span><i class="dpbar"
+                                style="--w:94%"><b>94%</b></i></div>
+                        <div class="dpv"><span class="dpv-k">领先竞品<small>ChatGPT Workspace Agents</small></span><i
+                                class="dpbar dim" style="--w:65%"><b>65%</b></i></div>
+                    </div>
+                    <div class="dp-side">
+                        <div class="dps"><b>+58<i>pts</i></b><span>相比今年 3 月的自己<em>半年跨了一大步</em></span></div>
+                        <div class="dps down"><b>−45<i>%</i></b><span>输入 token 消耗<em>质量升、成本反而降</em></span></div>
+                    </div>
+                </div>
                 <div class="hook rise"></div>
                 <div class="foot"><span class="src"></span><span class="pg">04 / 24</span></div>
             </section>
@@ -9486,7 +9648,8 @@
             </section>
             <section class="slide" data-i="5" data-key="unlocks">
                 <div class="kicker rise">05B · What it unlocks</div>
-                <h2 class="title rise">换上它之后：Agent 能接<span class="accent">以前接不了的复杂活</span>——每一条都<span class="accent">有数据</span></h2>
+                <h2 class="title rise">换上它之后：Agent 能接<span class="accent">以前接不了的复杂活</span>——每一条都<span
+                        class="accent">有数据</span></h2>
                 <div class="unlock">
                     <div class="ul-card">
                         <div class="ul-ic" style="background:linear-gradient(150deg,#35c3ff,#2b7fff)">◱</div>
@@ -9518,7 +9681,8 @@
                         <div class="ul-was">以前：质量和成本很难同时兼顾</div>
                     </div>
                 </div>
-                <div class="gov-note rise" style="margin-top:20px"><b>数据口径 →</b>以上均跑同一模型基线 Sonnet 4.6，<b>变量只有 harness</b>；下一页把这些数字的完整对比和口径展开。</div>
+                <div class="gov-note rise" style="margin-top:20px"><b>数据口径 →</b>以上均跑同一模型基线 Sonnet 4.6，<b>变量只有
+                        harness</b>；下一页把这些数字的完整对比和口径展开。</div>
                 <div class="hook rise"></div>
                 <div class="foot"><span class="src">来源 · GitHub Copilot harness · Copilot Studio</span><span
                         class="pg">06 / 24</span></div>
@@ -9539,28 +9703,29 @@
                             </div>
                             <div class="hn-plug"><span class="pg-a">装入</span><span class="pg-arrow">▸</span></div>
                             <div class="hn-module">
-                        <div class="hm-title"><span class="hm-tag">GitHub Copilot harness</span>把裸模型变成可靠 agent 的软件脚手架
-                        </div>
-                        <div class="hm-scene">
-                            <div class="sbxframe"><span class="sbxlbl">安全沙盒 · 隔离执行</span></div>
-                            <div class="rails"><i class="r1"></i><i class="r2"></i></div>
-                            <div class="spark"></div>
-                            <div class="loco"><b>AI 模型</b><span>有动力，但会跑偏</span></div>
-                            <div class="toolstop t1"><span class="pin">内置工具</span>
-                                <div class="stem"></div>
+                                <div class="hm-title"><span class="hm-tag">GitHub Copilot harness</span>把裸模型变成可靠 agent
+                                    的软件脚手架
+                                </div>
+                                <div class="hm-scene">
+                                    <div class="sbxframe"><span class="sbxlbl">安全沙盒 · 隔离执行</span></div>
+                                    <div class="rails"><i class="r1"></i><i class="r2"></i></div>
+                                    <div class="spark"></div>
+                                    <div class="loco"><b>AI 模型</b><span>有动力，但会跑偏</span></div>
+                                    <div class="toolstop t1"><span class="pin">内置工具</span>
+                                        <div class="stem"></div>
+                                    </div>
+                                    <div class="toolstop t2"><span class="pin">Memory · Skills</span>
+                                        <div class="stem"></div>
+                                    </div>
+                                    <div class="railband">铁轨 · 软件写出的约束</div>
+                                </div>
+                                <div class="hm-parts">
+                                    <div class="hmp"><b>① 铁轨</b><span>划定 agentic loop 边界，不让它跑偏</span></div>
+                                    <div class="hmp"><b>② 沙盒</b><span>隔离环境里执行，不误伤真实系统</span></div>
+                                    <div class="hmp"><b>③ 工具</b><span>文件工具 + Memory / Skills 随取随用</span></div>
+                                </div>
                             </div>
-                            <div class="toolstop t2"><span class="pin">Memory · Skills</span>
-                                <div class="stem"></div>
-                            </div>
-                            <div class="railband">铁轨 · 软件写出的约束</div>
                         </div>
-                        <div class="hm-parts">
-                            <div class="hmp"><b>① 铁轨</b><span>划定 agentic loop 边界，不让它跑偏</span></div>
-                            <div class="hmp"><b>② 沙盒</b><span>隔离环境里执行，不误伤真实系统</span></div>
-                            <div class="hmp"><b>③ 工具</b><span>文件工具 + Memory / Skills 随取随用</span></div>
-                        </div>
-                    </div>
-                    </div>
                     </div>
                     <div class="hn-plug"><span class="pg-a">于是</span><span class="pg-arrow">▸</span></div>
                     <div class="hn-result">
@@ -9606,7 +9771,8 @@
                                 <div class="t3i"><b>实时 · 语音</b><span>低延迟实时对话与语音 Agent，可接电话/呼叫中心</span></div>
                                 <div class="t3i"><b>可预测</b><span>结果稳定、可重复，适合合规场景</span></div>
                             </div>
-                            <div class="fend-pos"><b>产品定位</b>：现在就能用、商业模式不变的「确定活」通道。<br>例：SharePoint 问答 · 审批路由 · FAQ 客服 · 语音客服
+                            <div class="fend-pos"><b>产品定位</b>：现在就能用、商业模式不变的「确定活」通道。<br>例：SharePoint 问答 · 审批路由 · FAQ 客服 ·
+                                语音客服
                             </div>
                         </div>
                         <div class="fend new rise">
@@ -9640,10 +9806,12 @@
             </section>
             <section class="slide" data-i="8" data-key="who-does-what">
                 <div class="kicker rise">03 · Which one</div>
-                <h2 class="title rise">两个名字别混：<span class="accent">Microsoft Copilot</span> 是买来就用，<span class="accent">Copilot Studio</span> 是自己造</h2>
+                <h2 class="title rise">两个名字别混：<span class="accent">Microsoft Copilot</span> 是买来就用，<span
+                        class="accent">Copilot Studio</span> 是自己造</h2>
                 <div class="two-zone">
                     <div class="tz tz-p">
-                        <div class="tz-head"><span class="tz-tag p">Microsoft Copilot · 现成产品</span><b>让「我」这个人干得更快</b></div>
+                        <div class="tz-head"><span class="tz-tag p">Microsoft Copilot · 现成产品</span><b>让「我」这个人干得更快</b>
+                        </div>
                         <div class="tz-vrows">
                             <div class="tzv">
                                 <div class="tzv-need"><span>当我需要</span><b>「结合多份材料，快速得到结论与答案」</b></div>
@@ -9674,7 +9842,8 @@
                     </div>
 
                     <div class="tz tz-e">
-                        <div class="tz-head"><span class="tz-tag e">Copilot Studio · 建造平台</span><b>让「整个组织」的流程跑起来</b></div>
+                        <div class="tz-head"><span class="tz-tag e">Copilot Studio · 建造平台</span><b>让「整个组织」的流程跑起来</b>
+                        </div>
                         <div class="tzc big">
                             <div class="tzc-h"><i style="background:linear-gradient(150deg,#e878a8,#d6357e)"><svg
                                         class="ic" viewBox="0 0 24 24">
@@ -9691,8 +9860,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="peer-note rise"><b>不是三个等级 →</b>左边是<b>微软替你做好的 Copilot</b>，你按人头买来就能用；右边是<b>你自己造 Copilot 的地方</b>，业务逻辑、数据、权限都由你定义。<b>两边不冲突，绝大多数客户是同时都有。</b></div>
-                <div class="hook rise">个人提效，Microsoft Copilot 的 chat 和 Microsoft coworker 就够；一旦要让能力穿透整个组织、还要管得住成本和风险，才需要 Copilot Studio 这样的建造平台。</div>
+                <div class="peer-note rise"><b>不是三个等级 →</b>左边是<b>微软替你做好的 Copilot</b>，你按人头买来就能用；右边是<b>你自己造 Copilot
+                        的地方</b>，业务逻辑、数据、权限都由你定义。<b>两边不冲突，绝大多数客户是同时都有。</b></div>
+                <div class="hook rise">个人提效，Microsoft Copilot 的 chat 和 Microsoft coworker 就够；一旦要让能力穿透整个组织、还要管得住成本和风险，才需要
+                    Copilot Studio 这样的建造平台。</div>
                 <div class="foot"><span class="src">来源 · Microsoft Copilot Studio · 2026-08</span><span class="pg">09 /
                         24</span></div>
             </section>
@@ -9783,59 +9954,6 @@
                 <div class="foot"><span class="src">来源 · Copilot Studio · Level Up 2026-08</span><span class="pg">12 /
                         24</span></div>
             </section>
-            <section class="slide" data-i="12" data-key="proof">
-                <div class="kicker rise">06 · Proof</div>
-                <h2 class="title rise">同一套最难评估集，<span class="accent">正面赢过领先竞品</span>：业务流程自动化通过率更高</h2>
-                <div class="proof3">
-                    <div class="pf3-hero rise">
-                        <div class="pf3-num">
-                            <div class="big up">+29<span>pts</span></div><em>领先竞品</em>
-                        </div>
-                        <div class="pf3-bars">
-                            <div class="pf3-tag">评估通过率 · 零售数据集 · 业务流程自动化 · 同一套评估集</div>
-                            <div class="pf3v a"><span class="pf3v-k">GitHub Copilot harness</span><i class="pf3bar"
-                                    style="--w:94%"><b>领先</b></i></div>
-                            <div class="pf3v b"><span class="pf3v-k">领先竞品<small>ChatGPT Workspace
-                                        Agents</small></span><i class="pf3bar dim" style="--w:65%"></i></div>
-                            <div class="pf3-more"><b>+58 pts</b> 相比今年 3 月的自己（同一套最难评估集）——半年跨了一大步</div>
-                        </div>
-                    </div>
-                    <div class="pf3-grid rise">
-                        <div class="pf3-gh">同场景只换 harness（Standard → GitHub Copilot harness）· 5 项一起抬</div>
-                        <div class="pf3-cards">
-                            <div class="pf3c">
-                                <div class="pf3c-v up">+20.4<i>pts</i></div>
-                                <div class="pf3c-k">Knowledge 质量</div>
-                                <div class="pf3c-b"><i style="--w:90%"></i></div>
-                            </div>
-                            <div class="pf3c">
-                                <div class="pf3c-v up">+47.5<i>pts</i></div>
-                                <div class="pf3c-k">Code 质量</div>
-                                <div class="pf3c-b"><i style="--w:100%"></i></div>
-                            </div>
-                            <div class="pf3c">
-                                <div class="pf3c-v up">+28.2<i>pts</i></div>
-                                <div class="pf3c-k">File 任务质量</div>
-                                <div class="pf3c-b"><i style="--w:66%"></i></div>
-                            </div>
-                            <div class="pf3c">
-                                <div class="pf3c-v up">+11.9<i>pts</i></div>
-                                <div class="pf3c-k">Multi-tool 质量</div>
-                                <div class="pf3c-b"><i style="--w:32%"></i></div>
-                            </div>
-                            <div class="pf3c tok">
-                                <div class="pf3c-v down">−45<i>%</i></div>
-                                <div class="pf3c-k">输入 token 消耗</div>
-                                <div class="pf3c-b"><i class="down" style="--w:45%"></i></div>
-                            </div>
-                        </div>
-                        <div class="pf3-note">评估集刻意压到失败，<b>65% 通过率已算强</b>；eval 通过率 ≠ 生产成功率。质量升、成本降同时发生，均跑同一模型基线 Sonnet
-                            4.6，变量只有 harness。</div>
-                    </div>
-                </div>
-                <div class="foot"><span class="src">来源 · Copilot Studio · Level Up 2026-08 · s6 竞品评估（官方备注：领先竞品 = ChatGPT
-                        Workspace Agents）+ s5 质量数据</span><span class="pg">13 / 24</span></div>
-            </section>
             <section class="slide" data-i="13" data-key="platform-news">
                 <div class="kicker rise">07C · Platform news</div>
                 <h2 class="title rise">模型和 Agent 从哪来：<span class="accent">Agent 用内置</span>，<span class="accent">Workflow
@@ -9904,7 +10022,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="pnx-why"><b>为什么要这么分层？</b>我的理解是：<b>Agent 层追求「不用运维」，Workflow 层追求「不被锁死」</b>。九成场景内置模型直接够用，省掉部署、配额、版本升级这些活；剩下一成有特殊要求的，从 Workflow
+                    <div class="pnx-why"><b>为什么要这么分层？</b>我的理解是：<b>Agent 层追求「不用运维」，Workflow
+                            层追求「不被锁死」</b>。九成场景内置模型直接够用，省掉部署、配额、版本升级这些活；剩下一成有特殊要求的，从 Workflow
                         开个口子接出去——<b>既不牺牲开箱即用，也没有把你关在里面</b>。</div>
                 </div>
                 <div class="hook rise"></div>
@@ -9973,7 +10092,8 @@
                         <div class="fdn-arr">▸</div>
                         <div class="fdn app"><b>App 让人拍板</b><span>只看异常项，点确认或退回</span></div>
                     </div>
-                    <div class="fdown-why"><b>差别在哪？</b>只做到「读懂文件」，产出还是一段要人复制粘贴的文字；<b>接上 Workflow 和 App，它才真正接管了一段流程</b>——这也是我们把 Files
+                    <div class="fdown-why"><b>差别在哪？</b>只做到「读懂文件」，产出还是一段要人复制粘贴的文字；<b>接上 Workflow 和
+                            App，它才真正接管了一段流程</b>——这也是我们把 Files
                         做成一等公民、而不是一个附加功能的原因。</div>
                 </div>
                 <div class="hook rise"></div>
@@ -10249,10 +10369,10 @@
             <section class="slide seccover" data-key="sec-billing">
                 <div class="sc-wrap">
                     <div class="sc-no">Part 04 · Billing</div>
-                    <h2 class="sc-title rise">接下来聊钱：怎么算、怎么管</h2>
-                    <p class="sc-sub rise">GitHub Copilot harness 按用量计费——先弄清一次任务怎么扣 Credits，再看怎么把成本管到不超支。</p>
+                    <h2 class="sc-title rise">成本模型：计费口径与支出管控</h2>
+                    <p class="sc-sub rise">GitHub Copilot harness 采用按用量计费——先明确一次任务的 Credits 消耗口径，再看如何建立可预算、可分账的支出管控机制。</p>
                     <div class="sc-items rise"><span>三 harness 能力 + 计费</span><span>官方 s30
-                            逐项明细</span><span>四因素怎么算</span><span>怎么管住不超支</span></div>
+                            逐项明细</span><span>四因素计算口径</span><span>双层额度与支出管控</span></div>
                 </div>
             </section>
             <section class="slide" data-i="20" data-key="three-harness">
@@ -10385,7 +10505,8 @@
                     <div class="bdt-c ok">不计费</div>
                 </div>
                 <div class="bd-fn rise">
-                    <div class="bd-fn-i"><sup>1</sup>Copilot Studio 默认自带 Dataverse 容量：数据库 15 GB、文件 20 GB、日志 2 GB；超出部分可按 1 GB 为单位另行采购。</div>
+                    <div class="bd-fn-i"><sup>1</sup>Copilot Studio 默认自带 Dataverse 容量：数据库 15 GB、文件 20 GB、日志 2 GB；超出部分可按
+                        1 GB 为单位另行采购。</div>
                     <div class="bd-fn-i"><sup>2</sup>托管环境（Managed Environments）的许可细则以官方 Managed Environments 说明为准。</div>
                     <div class="bd-fn-i"><sup>3</sup>此处的托管环境仅针对 Copilot Studio 相关功能启用。</div>
                 </div>
@@ -10570,6 +10691,10 @@
                                 <p>先问 3 个问题分类，够条件的自助解决，不够的转人工，路径全是规则。</p>
                             </div>
                             <div class="spe">
+                                <h4>实时语音客服 <i>呼叫中心</i></h4>
+                                <p>电话接入后实时应答与转接，<b>低延迟是硬指标</b>，话术与路径事先配好。</p>
+                            </div>
+                            <div class="spe">
                                 <h4>报名 / 预约收集 <i>运营</i></h4>
                                 <p>按顺序把字段问全，校验后写进系统，每一步都不需要临场判断。</p>
                             </div>
@@ -10605,10 +10730,10 @@
                                 </div>
                             </div>
                             <div class="spe hi">
-                                <h4>月结叙述 <i>财务运营</i></h4>
-                                <p>目标：写出管理层看得懂的月结说明。</p>
+                                <h4>RFP / 标书审阅 <i>售前 / 投标</i></h4>
+                                <p>目标：把上百页标书拆成一份风险清单。</p>
                                 <div class="spe-steps"><span class="ss-lbl">AI
-                                        自动编排</span><span>拉账目</span><i>›</i><span>找异常</span><i>›</i><span>归因</span><i>›</i><span>写叙述</span>
+                                        自动编排</span><span>通读全文</span><i>›</i><span>拆解模块</span><i>›</i><span>标风险项</span><i>›</i><span>汇总排优先级</span>
                                 </div>
                             </div>
                         </div>
@@ -10620,7 +10745,7 @@
                 </div>
                 <div class="hook rise"></div>
                 <div class="foot"><span class="src">来源 · Microsoft Copilot Studio · 2026-08 · 官方场景示例（Legal / CS Ops /
-                        Finance Ops）</span><span class="pg">11 / 24</span></div>
+                        Presales）</span><span class="pg">11 / 24</span></div>
             </section>
             <section class="slide" data-key="faq">
                 <div class="kicker rise">FAQ · 常见问题</div>
@@ -10628,36 +10753,43 @@
                 <div class="faq">
                     <div class="faqc rise">
                         <div class="faqc-q"><span class="faqc-n">Q1</span>我们已经买的 Copilot Studio License，这次会不会变？</div>
-                        <div class="faqc-a"><b>不会。</b>Chat harness 和 Standard harness 的商业模式<b>完全维持原样</b>，你现在建的、跑的、连的连接器，计费一分钱不变。<b>新的按用量计费只针对 GitHub Copilot
+                        <div class="faqc-a"><b>不会。</b>Chat harness 和 Standard harness
+                            的商业模式<b>完全维持原样</b>，你现在建的、跑的、连的连接器，计费一分钱不变。<b>新的按用量计费只针对 GitHub Copilot
                                 harness</b>，而且要你主动选它才会发生。</div>
                     </div>
                     <div class="faqc rise">
                         <div class="faqc-q"><span class="faqc-n">Q2</span>那我们要不要再买一份新的？</div>
-                        <div class="faqc-a"><b>不需要买新产品。</b>GitHub Copilot harness <b>不是另一个要单独采购的东西</b>，它是 Copilot Studio 内部换上的执行引擎。你要做的只是<b>准备 Credit 容量</b>——预付 P3、按量
+                        <div class="faqc-a"><b>不需要买新产品。</b>GitHub Copilot harness <b>不是另一个要单独采购的东西</b>，它是 Copilot Studio
+                            内部换上的执行引擎。你要做的只是<b>准备 Credit 容量</b>——预付 P3、按量
                             PAYG，或者两者混合。</div>
                     </div>
                     <div class="faqc rise">
                         <div class="faqc-q"><span class="faqc-n">Q3</span>我们已经建好的 Agent 会不会坏掉、要重做？</div>
-                        <div class="faqc-a"><b>不用重做，也不会被强制迁移。</b>老 Agent 继续跑在原来的 harness 上。新 harness 是<b>并存的第三条路</b>，你可以只在新场景上试，或者把某一个 Agent 单独切过去做 A/B
+                        <div class="faqc-a"><b>不用重做，也不会被强制迁移。</b>老 Agent 继续跑在原来的 harness 上。新 harness
+                            是<b>并存的第三条路</b>，你可以只在新场景上试，或者把某一个 Agent 单独切过去做 A/B
                             对比。</div>
                     </div>
                     <div class="faqc rise">
                         <div class="faqc-q"><span class="faqc-n">Q4</span>能不能用我们自己的模型？会不会被锁死？</div>
-                        <div class="faqc-a"><b>能。</b>Agent 层用平台内置的 frontier 模型，图的是<b>不用自己管部署和版本</b>；如果你有自己微调的模型，或者要用 Foundry 目录里的其他模型，<b>挂在 Workflow 的模型节点上</b>就行。内部系统走 MCP
+                        <div class="faqc-a"><b>能。</b>Agent 层用平台内置的 frontier 模型，图的是<b>不用自己管部署和版本</b>；如果你有自己微调的模型，或者要用
+                            Foundry 目录里的其他模型，<b>挂在 Workflow 的模型节点上</b>就行。内部系统走 MCP
                             或自定义连接器接进来，<b>只接一次，两边都能用</b>。</div>
                     </div>
                     <div class="faqc rise">
                         <div class="faqc-q"><span class="faqc-n">Q5</span>按用量计费，成本会不会失控？</div>
-                        <div class="faqc-a"><b>这正是双层额度要解决的问题。</b>环境级预留把容量圈死——<b>别的部门吃不掉你的，你也吃不光全公司的</b>；Agent 级再设单个天花板，<b>超限自动告警或关停</b>。加上 Licensing Hub
+                        <div class="faqc-a"><b>这正是双层额度要解决的问题。</b>环境级预留把容量圈死——<b>别的部门吃不掉你的，你也吃不光全公司的</b>；Agent
+                            级再设单个天花板，<b>超限自动告警或关停</b>。加上 Licensing Hub
                             一屏看清谁在烧钱，<b>它是可预算、可分账的，不是开着水龙头</b>。</div>
                     </div>
                     <div class="faqc rise">
                         <div class="faqc-q"><span class="faqc-n">Q6</span>什么时候才真的会开始扣费？</div>
-                        <div class="faqc-a">分两段。<b>建的时候</b>：手动搭建三条 harness 全都不计费，只有自然语言搭建、评估、测试面板在 GHCP 上按用量算——因为这三件事本身就在真实调用模型。<b>跑的时候</b>：GHCP
+                        <div class="faqc-a">分两段。<b>建的时候</b>：手动搭建三条 harness 全都不计费，只有自然语言搭建、评估、测试面板在 GHCP
+                            上按用量算——因为这三件事本身就在真实调用模型。<b>跑的时候</b>：GHCP
                             不区分用户身份，一律按用量。<b>连接器、网关、Dataverse、管理中心这些配套，基本都不额外收费。</b></div>
                     </div>
                 </div>
-                <div class="faq-foot rise"><b>如果只让你们记住一句 →</b>这次升级<b>没有动任何人已经买的东西</b>，它只是在原来的 Copilot Studio 里，<b>多给了你一条能接更复杂业务的路</b>——要不要走、走多少，完全由你控制。
+                <div class="faq-foot rise"><b>如果只让你们记住一句 →</b>这次升级<b>没有动任何人已经买的东西</b>，它只是在原来的 Copilot Studio
+                    里，<b>多给了你一条能接更复杂业务的路</b>——要不要走、走多少，完全由你控制。
                 </div>
                 <div class="foot"><span class="src">来源 · Copilot Studio · Billing details &amp; Capacity management ·
                         2026-08</span><span class="pg">FAQ</span></div>
@@ -10807,7 +10939,7 @@
 
         /* ================= Presenter 口播模式 ================= */
         document.addEventListener('DOMContentLoaded', function () {
-            var NOTES = { "cover": { "t": "开场 · 45 秒", "h": ["抓：先把今天的落点说死", "立：只回答 4 个问题", "转：交代四段结构"], "n": "各位好。今天这一场，我不打算把 Copilot Studio 的功能从头念一遍。<span class=\"pz\">⏸ 停 2 秒</span>你们看屏幕上——<b>这一场我只回答 4 个问题</b>。<span class=\"pz\">⏸ 停 1 秒</span>第一，<b>Copilot Studio 做了哪些核心的改变</b>；第二，<b>面对多任务和复杂任务，它有哪些提升、对应什么定位</b>；第三，<b>它的功能和路线图长什么样</b>；第四，<b>怎么收费、成本怎么管</b>。<span class=\"pz\">⏸ 停 2 秒</span>把这 4 个问题讲清楚，你就能判断该不该上、怎么用。<span class=\"pz\">⏸ 停 1 秒</span>而贯穿全场的一句主线是：Copilot Studio 现在<b>三条 harness 并存，不是新的取代旧的，而是一个需求进来、按它的性质去挑</b>。这 4 个问题，正好对应后面的四段。" }, "why-now": { "t": "01 · 60 秒", "h": ["抓：从人的需求变化切入", "立：AI assistant → AI doer", "转：需求变了，平台必须跟着变"], "n": "先不谈产品，谈一件更根本的事：<b>人对 AI 的期待变了</b>。<span class=\"pz\">⏸ 停 2 秒</span>看这四行。以前数据各自孤立，现在要打通；以前是以单个应用为中心，现在是互联的工作系统；以前每一步都要人来协调，现在是人和 Agent 一起干。<span class=\"pz\">⏸ 停 1 秒</span>但真正的分水岭是中间这一行——<b>AI 从「助手」变成「执行者」</b>。从 AI assistant 到 AI doer。<span class=\"pz\">⏸ 停 3 秒 · 让这句话落地</span>这一个字的差别，代价非常大。回答问题，模型自己就够了；<b>接手工作，就得会规划、会调工具、跑错了还能自己爬起来</b>。<span class=\"pz\">⏸ 停 1 秒</span>需求变了，AI 的工作模式跟着变，那么<b>造 Agent 的平台也必须换引擎</b>——这就是今天要讲的全部背景。" }, "one-studio": { "t": "02 · 75 秒 · 讲清为什么要三件套", "h": ["抓：为什么不能只有 Agent", "立：判断要落到系统里", "证：竞品的路线选择", "转：现场演示"], "n": "那么升级后的 Copilot Studio 长什么样？一句话：<b>一个 Studio，一次对话，三样一起建</b>。<span class=\"pz\">⏸ 停 2 秒</span>但我更想先回答一个问题——<b>为什么非要有 Workflow 和 App？只有 Agent 不行吗？</b><span class=\"pz\">⏸ 停 2 秒</span>我的看法是这样：<b>Agent 解决的是「判断」，但判断完了，得落到系统里</b>。它想通了这张发票有问题，接下来呢？要写进财务系统、要发审批、要有人点确认。<b>这一步过去全靠写代码</b>。<span class=\"pz\">⏸ 停 2 秒</span>所以三件套其实是一条完整链路：<b>Agent 管判断，Workflow 管确定执行，App 管人机交互</b>——判断、执行、确认，缺一环这件事就跑不完。<span class=\"pz\">⏸ 停 2 秒</span>说到这儿，可以看看行业里另外两家怎么做的。<b>Anthropic 走的是 MCP 加 SDK</b>，工具能接，但编排逻辑基本靠开发者写代码；<b>OpenAI 更值得一提</b>——他们做过一个可视化的 Agent Builder，但已经官宣<b>今年 11 月 30 日停用</b>，让大家回到 Agents SDK，也就是回到写代码。<span class=\"pz\">⏸ 停 3 秒 · 让这个信息落地</span>这说明什么？<b>说明「编排」这一层是真的难做</b>。<span class=\"pz\">⏸ 停 1 秒</span>而我们的选择不太一样：把编排做成<b>可视化的 Workflow，直接拖 1600 多个现成连接器</b>——SAP、SharePoint、Teams、ServiceNow，业务人员自己就能接上，不用每个集成都找开发排期。<span class=\"pz\">⏸ 停 2 秒</span>所以这不是谁强谁弱的问题，<b>是面向的人不一样</b>：他们把能力交给开发者，我们想把它交到<b>懂业务的人</b>手里。<span class=\"pz\">⏸ 停 2 秒</span>这句话说得再好，不如看一眼。" }, "demo": { "t": "03 · Demo 引导 · 30 秒 + 视频", "h": ["抓：交出主动权", "带：给四个观察点", "转：进入 harness 解释"], "n": "接下来这段我少说，<b>你们自己看</b>。<span class=\"pz\">⏸ 停 1 秒</span>看的时候留意四件事：第一，<b>提需求用的是日常语言</b>，不写代码、不套模板；第二，它<b>自己拆解</b>——理解意图、生成结构、接上数据和逻辑；第三，<b>生成完当场就能试</b>，不满意再说一句就改；第四，最后出来的是<b>三件套互相调用</b>，不是一个孤立的聊天机器人。<span class=\"pz\">⏸ 停 2 秒 · 然后播放</span>……看完了。那问题就来了——<b>它凭什么能做到这些？</b>这就要说到 harness。" }, "sec-harness": { "t": "Part 01 封面 · 15 秒", "h": ["转场：给听众一张地图"], "n": "第一段，我们把 harness 这件事讲透。<span class=\"pz\">⏸ 停 1 秒</span>三个问题：<b>到底换了哪一层</b>、<b>harness 里面装了哪四样东西</b>、以及<b>一个需求进来该走哪条</b>。" }, "arch-changed": { "t": "04 · 75 秒 · 本段核心", "h": ["抓：只换了一层", "证：架构图", "带：不用另买 License", "转：换了之后能干什么"], "n": "这页是今天技术部分最重要的一张图，我讲慢一点。<span class=\"pz\">⏸ 停 2 秒</span>从 Standard 换到 GitHub Copilot harness，<b>只换了中间的执行引擎，上下两层没动</b>。<span class=\"pz\">⏸ 停 2 秒</span>原来是规则编排：Topics 加 Agent Flow，<b>按你配好的路径走</b>——好处是可预测，代价是<b>遇到你没配过的情况，它就停在那儿</b>。<span class=\"pz\">⏸ 停 1 秒</span>换成 GHCP 之后是 agentic orchestrator：<b>自己规划、自己迭代、跑错自己恢复</b>，而且这个 loop 是在<b>隔离的安全沙箱里跑的</b>，自带文件工具和 Memory、Skills。<span class=\"pz\">⏸ 停 2 秒</span>请特别看<b>没变的部分</b>：上面的渠道接入——Teams、M365 Copilot、Web——还有下面受治理的模型调用，<b>三条 harness 完全一样</b>。所以这不是让你重建一套，是<b>同一个平台里换个更强的引擎</b>。<span class=\"pz\">⏸ 停 3 秒 · 留给下面那条绿色提示</span>最后一句特别重要，几乎每个客户都会问：<b>不用另外买 GitHub Copilot License</b>。它是 Copilot Studio 内置的执行引擎，不是要单独采购的产品——在 Studio 里直接选用，<b>只消耗 Copilot Credits</b>。" }, "unlocks": { "t": "05B · 75 秒 · 能力配数据", "h": ["立：四件以前做不到的事", "证：每条都挂一个数字", "转：那 harness 到底是什么"], "n": "换上它之后，具体多了哪些本事？四条，而且我给<b>每一条都配了数字</b>——因为「更强」这两个字，不给数据就是空话。<span class=\"pz\">⏸ 停 2 秒</span>第一，<b>啃得动复杂流程</b>，把一件大事自己拆成若干步做到完成。数字是：业务流程自动化的评估通过率 <b>94%，比领先竞品高 29 个点</b>。以前呢？一次问答就结束了。<span class=\"pz\">⏸ 停 2 秒</span>第二，<b>跑错了自己恢复</b>，某一步失败会重试或换条路。数字更能说明进步速度：<b>相比今年 3 月的自己，同一套最难评估集提升了 58 个点</b>——半年跨了一大步。<span class=\"pz\">⏸ 停 2 秒</span>第三，<b>工具挑得准</b>，第一次就选对工具、填对参数。Multi-tool 质量 <b>+11.9 个点</b>，File 任务质量 <b>+28.2 个点</b>。<span class=\"pz\">⏸ 停 2 秒</span>第四，也是最反直觉的一条：<b>又稳又省</b>。质量在涨，<b>输入 token 反而降了 45%</b>。<span class=\"pz\">⏸ 停 1 秒</span>为什么能同时做到？因为更听指令就少走弯路，缓存命中高就少重复读——<b>省下来的不是压缩出来的，是不浪费省出来的</b>。<span class=\"pz\">⏸ 停 2 秒</span>这里请一定把口径说清楚：<b>以上全部跑同一个模型基线 Sonnet 4.6，唯一的变量就是 harness</b>。<span class=\"pz\">⏸ 停 1 秒</span>那问题来了——<b>凭什么换个 harness 就能做到这些？</b>下一页把这个词讲清楚。" }, "harness-def": { "t": "06 · 60 秒 · 概念定桩", "h": ["抓：一个比喻", "立：铁轨/沙盒/工具", "转：它不是另一个产品"], "n": "harness 这个词很多人第一次听。我给一个比喻：<b>harness 就是给 AI 铺的铁轨</b>。<span class=\"pz\">⏸ 停 2 秒</span>模型本身像一台有动力的车头——<b>力气很大，但会跑偏</b>。<span class=\"pz\">⏸ 停 1 秒</span>harness 干三件事：第一，<b>铁轨</b>，用软件写出的约束，划定 agentic loop 的边界，不让它乱跑；第二，<b>沙盒</b>，在隔离环境里执行，不误伤真实系统；第三，<b>工具</b>，文件工具加 Memory、Skills 随取随用。<span class=\"pz\">⏸ 停 2 秒</span>装上这套之后，Copilot Studio 就<b>能接长流程、跑错能自己恢复、工具一次挑对</b>。<span class=\"pz\">⏸ 停 1 秒</span>这里再强调一次，因为最容易误解：<b>harness 不是另一个要买的产品</b>，它是 Studio 内部换上的引擎。引擎更强，<b>平台能接的业务就更复杂</b>，仅此而已。" }, "coexist": { "t": "07 · 65 秒 · 关键分流", "h": ["抓：并存不是替代", "立：左右两条路", "转：那在整个家族里的位置呢"], "n": "讲到这里必须澄清一个最常见的误会：<b>GitHub Copilot harness 没有取代 Standard harness</b>。<span class=\"pz\">⏸ 停 2 秒</span>同一个 Studio 里，<b>一个需求进来，分两条路走</b>。<span class=\"pz\">⏸ 停 1 秒</span>左边这条，接<b>规则清楚、路径固定</b>的活。关键词是配置化对话，快而稳——响应你全配好，<b>它不跑推理，所以更快、结果可重复</b>，特别适合合规场景。SharePoint 问答、审批路由、FAQ 客服，都走这条。<span class=\"pz\">⏸ 停 2 秒</span>右边这条，接<b>复杂多变、要 AI 临场判断</b>的活。而且注意，右边<b>不是一个 Agent，是一个平台</b>——Agent 管判断、Workflow 管稳定执行、App 让人来批。读发票、判异常、转审批、一键批，这一整条链都在右边。<span class=\"pz\">⏸ 停 2 秒</span>怎么选，一句话：<b>流程固定要快要稳走左边，任务复杂要临场判断走右边</b>。<b>按任务挑，不是二选一</b>。" }, "who-does-what": { "t": "08 · 65 秒 · 把两个名字分清", "h": ["抓：Microsoft Copilot vs Copilot Studio", "立：一个是买成品，一个是自己造", "转：那平台全景长什么样"], "n": "这里要澄清一个几乎每场都被问到的混淆：<b>Microsoft Copilot 和 Copilot Studio，到底什么关系？</b><span class=\"pz\">⏸ 停 2 秒</span>我用一句话区分：<b>左边是买来就能用的成品，右边是你自己造 Copilot 的地方</b>。<span class=\"pz\">⏸ 停 2 秒</span>左边 <b>Microsoft Copilot</b> 里面有两个形态。要结合几份材料快速拿结论，用 <b>chat</b>，问一句答一句。要把一件跨系统、多步骤的活整个托付出去，用 <b>Microsoft coworker</b>，它像个数字同事替你把活干完。<span class=\"pz\">⏸ 停 1 秒</span>这两个的共同点是：<b>功能是微软定义好的，你按人头买，开箱即用，不需要建任何东西</b>。<span class=\"pz\">⏸ 停 2 秒</span>但成品总有边界。<b>当这件事只有你们公司才这么做的时候，成品就覆盖不到了</b>——你们的审批规则、你们的客户分级、你们的 SAP 字段，微软不可能预置。<span class=\"pz\">⏸ 停 2 秒</span>这时候才轮到右边的 <b>Copilot Studio</b>：业务逻辑、连哪些数据、谁有什么权限，<b>全部由你定义</b>。它给你三件事——能力穿透整个组织，一次建好全公司在 Teams、Web、业务系统里都能用；Agent 可治理，谁建的、连了什么、能做什么动作，随时能盘点和收回；成本可控，环境级加 Agent 级双层额度，超限自动关停。<span class=\"pz\">⏸ 停 2 秒</span>所以请不要把它们当成三个等级去比高低。<b>它们回答的是两个不同的问题：一个是「我想更快」，一个是「我要把公司的流程造出来」</b>。<span class=\"pz\">⏸ 停 1 秒</span>实际上，<b>绝大多数客户是两边同时都有的</b>。" }, "scenario-split": { "t": "尾声 · 60 秒 · 最实用的一页", "h": ["抓：给一把判断尺子", "证：六个真实场景", "收：带着这把尺子回去"], "n": "在收尾之前，我留了<b>今天最实用的一页</b>——<b>给你一把尺子</b>，回去就能用。<span class=\"pz\">⏸ 停 1 秒</span>左边三个是 Standard harness 的典型场景：IT 自助问答、官网客服分流、报名预约收集。它们的共同点在最下面这句：<b>能画成一张确定的流程图</b>。<span class=\"pz\">⏸ 停 2 秒</span>右边三个不一样。法务的合同条款分诊、客服的工单分诊与回复、财务的月结叙述。注意看每一条：<b>你只给了目标，中间步骤是 AI 自己排的</b>。比如合同分诊，你说的是「把风险条款挑出来送审」，读条款、比对标准、判风险级、异常送审——<b>这四步是它自己编排的</b>。<span class=\"pz\">⏸ 停 3 秒</span>所以判断标准非常简单，请记住这一句：<b>场景能写成固定流程图，走 Standard；只能说清目标、说不清步骤，才需要 GitHub Copilot harness</b>。" }, "sec-platform": { "t": "Part 02 封面 · 12 秒", "h": ["转场"], "n": "第二段，我们把镜头拉远，看<b>整个平台的全景</b>，再用数据回答一个问题——<b>它凭什么更强</b>。" }, "governed": { "t": "10 · 75 秒 · 四项能力逐个说透", "h": ["立：上层建什么、下层自带什么", "带：每个模块两句说完", "转：那更强有证据吗"], "n": "全景其实就两层。<span class=\"pz\">⏸ 停 1 秒</span>上面是<b>三件套</b>，解决「建什么」：Agent 理解和判断、Workflow 规模化执行、App 让人来操作。<span class=\"pz\">⏸ 停 2 秒</span>下面四项，我一个一个说，<b>每个只说两句</b>。<span class=\"pz\">⏸ 停 1 秒</span><b>Microsoft IQ</b>：第一，它把公司自己的邮件、会议、文件和组织关系喂给每个 Agent；第二，这意味着 <b>Agent 知道「这件事在你们公司是怎么干的」</b>，而不只是一个通用模型。<span class=\"pz\">⏸ 停 2 秒</span><b>模型与 harness</b>：第一，各家最新的 frontier 模型平台帮你接好了；第二，你<b>不用自己管部署、配额和版本升级</b>——这部分运维成本是真金白银。<span class=\"pz\">⏸ 停 2 秒</span><b>Agent 365</b>：第一，全公司建了多少个 Agent、分别连了什么数据，<b>可以盘点和审计</b>；第二，它们有身份、有权限、能被威胁防护监控，<b>出事能随时收回权限</b>。<span class=\"pz\">⏸ 停 2 秒</span><b>成本可控</b>：第一，环境级预留把容量圈死，部门之间不会互相吞食；第二，Agent 级再设天花板，<b>超限自动告警或关停</b>。<span class=\"pz\">⏸ 停 2 秒</span>我想强调的是：<b>这四项都是平台自带的，不需要你另外采购、另外集成，也不会因为换了 harness 就再收你一遍钱</b>。<span class=\"pz\">⏸ 停 1 秒</span>这才是它跟一个单纯 Agent 工具的真正区别。" }, "proof": { "t": "11 · 45 秒 · 竞品对比", "h": ["抓：不吹，看数", "证：对标领先竞品 +29pt", "带：同场景换 harness 是佐证"], "n": "前面讲了这么多，<b>有没有数据？</b>有。<span class=\"pz\">⏸ 停 2 秒</span>先看最硬的一个——<b>对标领先竞品</b>。同一套最难的评估集、同一个零售数据集，做业务流程自动化，<b>我们的通过率比领先竞品高 29 个点</b>。<span class=\"pz\">⏸ 停 2 秒</span>作为参照，<b>相比今年 3 月的自己，进步了 58 个点</b>——半年时间跨了一大步。<span class=\"pz\">⏸ 停 1 秒</span>这里要诚实说一句：<b>评估集是刻意压到失败的，65% 通过率就已经算强了</b>，而且 eval 通过率不等于生产成功率。<span class=\"pz\">⏸ 停 2 秒</span>右边这一栏是佐证——<b>同一个场景，只把 harness 换掉</b>：Knowledge 质量涨 20 个点、Code 涨 47、File 涨 28，而且<b>输入 token 反而降了 45%</b>。<span class=\"pz\">⏸ 停 1 秒</span><b>质量往上、成本往下，同时发生</b>，都是同一模型基线 Sonnet 4.6，变量只有 harness。" }, "platform-news": { "t": "12 · 50 秒 · 高频提问点", "h": ["抓：能不能用我自己的模型", "立：Agent 内置 / Workflow 外接", "转：进入能力细节"], "n": "接下来这页专门回答一个<b>几乎每个客户都会问的问题</b>：<b>能不能用我们自己的模型？能不能接我们已经建好的 Agent？</b><span class=\"pz\">⏸ 停 2 秒</span>答案要分两层说，<b>说错了会误导客户</b>。<span class=\"pz\">⏸ 停 1 秒</span>左边，<b>Agent 这一层用的是平台内置的 frontier 模型</b>——GPT、Claude、推理模型，下拉框切换，换模型不用重建 Agent，模型运维平台帮你托底。<span class=\"pz\">⏸ 停 2 秒</span>右边，<b>Workflow 这一层可以往外接</b>。要用 Foundry 目录里的模型——DeepSeek、Llama、Mistral，可以；要调 1P、3P 的 Agent 或者 MCP 工具，也可以，<b>在 Workflow 里当成一个节点调用</b>。<span class=\"pz\">⏸ 停 2 秒</span>所以完整的回答是：<b>能，但落在 Workflow 层</b>。Agent 层保持内置，是<b>为了帮你省掉模型运维的负担</b>——两层配合起来，<b>并没有锁死</b>。" }, "sec-capabilities": { "t": "Part 03 封面 · 12 秒", "h": ["转场"], "n": "第三段，逐个看三件套<b>这次新增了什么本事</b>。<span class=\"pz\">⏸ 停 1 秒</span>顺序是：先 Agent，再 App，最后 Workflow。" }, "agent-files": { "t": "13 · 65 秒 · 重点在下游", "h": ["立：Files 四项新能力", "转：读懂只是第一步", "证：结果要能流进系统"], "n": "先说 Agent 的 Files 能力。左边四项，都已 GA。<span class=\"pz\">⏸ 停 1 秒</span>第一，<b>原生生成</b>——直接产出 Word、Excel、PPT、PDF。第二，<b>大文件分析</b>——上百页一次读完。第三，<b>跨文件比对</b>。第四，<b>Agent 间传文件</b>，形成流水线。<span class=\"pz\">⏸ 停 2 秒</span>但我不希望这一页只被记成「它能读文件」——<b>能读文件这件事，市面上已经不稀奇了</b>。<span class=\"pz\">⏸ 停 2 秒</span>真正的差别在下面这条链上。<b>文件进来、Agent 读并判断、Workflow 写进系统、App 让人拍板</b>。<span class=\"pz\">⏸ 停 1 秒</span>你看第三步和第四步——<b>回写 SAP 或 Dataverse、发起审批、让人只看异常项点确认</b>。<span class=\"pz\">⏸ 停 2 秒</span>如果只做到「读懂」，产出还是一段要人复制粘贴到系统里的文字，<b>省下来的只是阅读时间</b>；接上 Workflow 和 App 之后，<b>它才真正接管了一整段流程</b>。<span class=\"pz\">⏸ 停 2 秒</span>这也是我们把 Files 做成一等公民、而不是一个附加功能的原因——<b>文件通常是业务流程的起点，起点接不住，后面整条链都串不起来</b>。<span class=\"pz\">⏸ 停 1 秒</span>右边是官方真实示例：用户上传两张 PDF 收据，Agent 调用 analyzing-pdf 技能解析并跨账户对账。<span class=\"pz\">⏸ 停 1 秒</span>下一页，我用一个更大的例子给你们看实拍。" }, "agent-files-demo": { "t": "13B · 40 秒 · 实拍分步", "h": ["带：按 ↓ 切换画面", "证：单份深读 → 多份汇总", "收：人只做最后判断"], "n": "这就是刚才说的能力，用一个招标文件的例子看真实界面。我不一次性全铺出来，<b>一步一步给你看</b>。<span class=\"pz\">⏸ 停 1 秒</span>先看这张——<b>单份深读</b>：整份招标文件读进去，自动拆成 9 大模块，每条发现都挂着风险标签。<span class=\"pz\">⏸ 停 3 秒 · 让听众看清这张图</span>按一下 ↓——画面切到<b>多份汇总</b>：多个文档的高风险项和置信度，一屏看全，直接排优先级。<span class=\"pz\">⏸ 停 3 秒</span>所以人做什么？<b>只做最后判断</b>——确认高风险、拍板取舍，不再逐页人肉啃。这，就是大文件能力真正改变的东西。" }, "agent-files-OLD": { "t": "obsolete", "h": [], "n": "" }, "agent-loop": { "t": "14 · 35 秒", "h": ["立：loop 四步", "带：Hooks 是治理钩子"], "n": "刚才反复提到的 agentic loop，这页拆成四步。<span class=\"pz\">⏸ 停 1 秒</span>第一，<b>自己规划步骤</b>——拿到任务先想清楚要几步，而不是一次性硬答。第二，<b>工具挑得更准</b>。第三，<b>递归执行到完成</b>——一轮不够就再来一轮。<span class=\"pz\">⏸ 停 2 秒</span>第四条对做治理的人特别重要：<b>Hooks</b>，可以在关键节点插入<b>你自己的校验、日志或安全扫描</b>。这条目前是 Preview。" }, "app-build": { "t": "15 · 40 秒", "h": ["抓：一句话生成 App", "证：截图里的 200 credits"], "n": "第二件套，App。<span class=\"pz\">⏸ 停 1 秒</span>「帮我建一个入职引导 App」——一句话，<b>屏幕、数据、逻辑一起生成，一分多钟出结果</b>。<span class=\"pz\">⏸ 停 2 秒</span>但它不是空壳模板：通过 Work IQ 拿到<b>组织的人、内容和流程上下文</b>；而且连得上业务系统——Agent、Workflow，还有一千六百多个连接器。<span class=\"pz\">⏸ 停 1 秒</span>最后一条是给 IT 的定心丸：<b>建好的 App 跑在托管宿主里，部署、运行、治理都是企业级的</b>。<span class=\"pz\">⏸ 停 1 秒</span>顺便看右图左下角，写着<b>「用了 200 credits」</b>——<b>成本当场就是透明的</b>，这一点等下讲计费还会回来。" }, "workflow-canvas": { "t": "16 · 50 秒 · 实拍页", "h": ["立：确定 + 判断混编", "证：发票分类实拍", "转：那新节点有哪些"], "n": "第三件套，Workflow。这是一张<b>真实的发票分类流程</b>。<span class=\"pz\">⏸ 停 2 秒</span>跟着走一遍：发票邮件到达触发；<b>Extract 从 PDF 里读金额、类别、日期</b>；<b>Classify 按金额与合规分三支</b>。这两步是<b>确定步骤，每次都一模一样</b>。<span class=\"pz\">⏸ 停 2 秒</span>然后是三个分支——金额合规的直接报、超政策上限的转审批、缺票的发邮件请补材料。<b>这三个判断，交给 Agent</b>。<span class=\"pz\">⏸ 停 2 秒</span>这就是那句话的含义：<b>结构化 where needed，AI where valuable</b>——<b>该固定的固定，该判断的才让 AI 判断</b>。<span class=\"pz\">⏸ 停 1 秒</span>另外注意上面标的：新建体验已 GA，<b>节点可以单独测试，失败处可以 Resume</b>。" }, "wf-nodes": { "t": "17 · 40 秒 · 分步", "h": ["带：按 ↓ 四个节点逐个登场", "立：四个新节点", "收：合起来解决一件事"], "n": "Workflow 这次新增四种节点，我<b>一个一个给你看</b>，按 ↓ 推进。<span class=\"pz\">⏸ 停 1 秒 · 按 ↓</span><b>Extract</b>，从 PDF、图片、Office 文件直接抽结构化字段，不用写解析代码。<span class=\"pz\">⏸ 停 1 秒 · 再按 ↓</span><b>Code</b>，流程里插一段 Python 当一步执行。<span class=\"pz\">⏸ 停 1 秒</span><b>Cowork</b>，把跨应用的活直接叫外援去做。<span class=\"pz\">⏸ 停 1 秒</span><b>Resume</b>，跑挂了不用整条重来，修好从失败那步接着跑。<span class=\"pz\">⏸ 停 2 秒</span>这四个合起来其实解决同一件事：<b>让「确定流程」也能处理非结构化输入、复杂计算和意外失败</b>。<span class=\"pz\">⏸ 停 1 秒</span>那它跟 Power Automate 到底怎么选？" }, "vs-power-automate": { "t": "18 · 70 秒 · 销售最容易被问住的一页", "h": ["立：五个维度", "带：三个销售顾虑正面回应", "收：不是替代，是分工"], "n": "这是客户必问的一题，也是<b>我们自己人最容易讲拧的一页</b>，所以我想把几个顾虑直接摊开说。<span class=\"pz\">⏸ 停 2 秒</span>先看表。最适合的场景：Power Automate 是<b>可预测任务的确定自动化</b>；Workflow 是<b>确定编排加 AI 推理的端到端流程</b>。重点看<b>出错处理</b>这一行：<b>Power Automate 整条重跑，Workflow 从失败那一步恢复</b>——长流程里这个差别非常要命。<span class=\"pz\">⏸ 停 2 秒</span>下面是三个顾虑，我们自己心里得有底。<span class=\"pz\">⏸ 停 1 秒</span><b>顾虑一：这是不是要把客户的 Power Automate 投资否掉？</b>不是，而且这句话必须主动说。客户过去建的流程<b>一个都不用动</b>，步骤固定、不需要 AI 判断的活，<b>继续留给 Power Automate</b>——它更成熟、连接器最多、运维成本最低。<span class=\"pz\">⏸ 停 2 秒</span><b>顾虑二：客户会不会觉得“又要多花一笔钱”？</b>关键在口径。<b>不要说“换成 Workflow”，要说“在原来跑不通的那段上补一块”</b>。客户真正付钱的，是那些以前<b>根本自动化不了、只能人工干</b>的环节。<span class=\"pz\">⏸ 停 2 秒</span><b>顾虑三：客户问“那我以后到底用哪个”。</b>给一句话就行：<b>流程能画出来就用 Power Automate，画不出来才用 Workflow</b>。<span class=\"pz\">⏸ 停 2 秒</span>而且最重要的一点：<b>两者可以互相调用</b>。不是二选一，是一条链上的两段分工。" }, "sec-billing": { "t": "Part 04 封面 · 20 秒", "h": ["转场：主动讲清成本结构"], "n": "最后一段，我们谈<b>成本</b>。<span class=\"pz\">⏸ 停 2 秒</span>我不会回避这一段。<b>计费模型本身就是产品设计的一部分</b>，把它讲清楚，你们才能判断这件事值不值得做。<span class=\"pz\">⏸ 停 2 秒</span>这一段分四层：先对齐<b>三条 harness 的计费差异</b>，再看<b>官方逐项明细</b>，然后是<b>一次任务到底怎么算</b>，最后是<b>用什么手段把支出管住</b>。<span class=\"pz\">⏸ 停 1 秒</span>先把结论放在前面：<b>你们现有的投资不受影响，新的计费只针对新选择的能力</b>。" }, "three-harness": { "t": "19 · 45 秒", "h": ["立：三条并存", "带：左二不变、右一新增"], "n": "先把三条 harness 的能力和计费<b>放在一张表里对齐</b>。<span class=\"pz\">⏸ 停 2 秒</span>上半部分是能力。左边两条你们已经熟了。重点看最右边：<b>最新 Chat 加推理模型、Skills 和 Memory、内置 AI Workflows</b>，还有<b>agentic loop</b>和深度推理加 Work IQ。<span class=\"pz\">⏸ 停 2 秒</span>下半部分是计费，我只要你记住<b>一句对比</b>：<span class=\"pz\">⏸ 停 1 秒</span>左边两条，<b>含在 M365 Copilot 许可内或者按消耗——商业模式不变</b>；最右边这条，<b>建和跑都按用量计费</b>。<span class=\"pz\">⏸ 停 2 秒</span>至于具体哪些收费、哪些不收费，下一页有官方的逐项明细。" }, "billing-detail": { "t": "20 · 60 秒 · 官方明细", "h": ["立：你已买的没变", "带：分三组 + 三条脚注", "收：只有 GHCP 建/跑变了"], "n": "这是官方 Billing details 的中文版，我原样搬过来。<span class=\"pz\">⏸ 停 1 秒</span>但在看表之前，我想先把最要紧的一句话说在前面——<b>你们现在手上的 Copilot Studio License，功能一点没变，计费也一点没变</b>。<span class=\"pz\">⏸ 停 2 秒</span>对应到表上就是左边这两列：<b>Chat harness 和 Standard harness，商业模式完全维持原样</b>。你之前怎么建、怎么跑、怎么付钱，今天还是那样。<span class=\"pz\">⏸ 停 2 秒</span>那什么时候会变？只有当你要处理<b>更灵活、更复杂的业务流程</b>，主动选择 GitHub Copilot harness 的时候——也就是最右边这一列。<span class=\"pz\">⏸ 停 1 秒</span>而且它的变化分两段，<b>建的时候和跑的时候都会算</b>。<span class=\"pz\">⏸ 停 2 秒</span>先看第一组，<b>建 Agent</b>。请注意这一行：<b>手动搭建，三条 harness 全都不计费</b>——你在画布上点选、连数据、改设置，一分钱不花。变的是下面三项：自然语言搭建、评估、测试面板，<b>只有 GHCP 这一列按用量计费</b>。为什么？因为这三件事本身就在真实调用模型和工具，它是有算力成本的。<span class=\"pz\">⏸ 停 2 秒</span>第二组，<b>跑 Agent</b>。左边两列规则照旧——有 M365 Copilot 许可的用户合理使用不计费，外部渠道走公开费率表。最右边不区分身份，<b>一律按用量</b>。<span class=\"pz\">⏸ 停 2 秒</span>第三组是<b>配套能力</b>，这组我觉得是最容易被忽略的好消息：连接器、本地数据网关、Dataverse、托管环境、管理中心——<b>三条 harness 基本都不额外收费</b>。也就是说，<b>你为了治理和集成付出的那些基础设施，不会因为换了 harness 就再收你一遍钱</b>。<span class=\"pz\">⏸ 停 2 秒</span>下面三条小字是官方脚注，我也翻译过来了：Dataverse 默认自带 15 GB 数据库、20 GB 文件、2 GB 日志，超了才按 1 GB 加购；托管环境按官方许可说明走，而且这里只针对 Copilot Studio 相关功能启用。<span class=\"pz\">⏸ 停 2 秒</span>所以这张表真正的结论只有一句：<b>旧的一切照旧，只有你主动选了 GHCP harness 去干更复杂的活，才引入按用量计费</b>。" }, "when-charged": { "t": "21 · 45 秒", "h": ["立：单位和维度都统一", "带：建 vs 跑对称看"], "n": "上一页是「哪些收费」，这一页是「<b>什么时候扣</b>」。<span class=\"pz\">⏸ 停 2 秒</span>先把两件事钉死：<b>计价单位统一是 Copilot Credit，一个 Credit 等于一美分</b>；<b>计价维度统一是 Models、Context、Tools、Runtime 四项</b>。<span class=\"pz\">⏸ 停 2 秒</span><b>建和跑用的是同一套算法，只是发生在不同阶段</b>。<span class=\"pz\">⏸ 停 1 秒</span>建的阶段：自然语言构建、评估、测试面板要扣——因为<b>这几件事本身就在跑模型和工具</b>。而<b>手动搭建不扣</b>：点选、连数据、改设置，一分钱不花。<span class=\"pz\">⏸ 停 2 秒</span>跑的阶段：用户真的把任务交给它执行才扣。连接器和管理动作<b>不扣</b>。<span class=\"pz\">⏸ 停 1 秒</span>再强调一次边界：<b>只有 GitHub Copilot harness 这样算</b>。" }, "billing-factors": { "t": "22 · 70 秒 · 为什么这么计费才合理", "h": ["立：四因素", "证：发票稽核例子", "收：灵活性带来成本控制与 ROI"], "n": "四个因素展开讲。<span class=\"pz\">⏸ 停 1 秒</span><b>Models</b>，这次任务调了几次模型、用的哪个——越强的模型单价越高。<b>Context</b>，为了答准检索了多少组织数据。<b>Tools</b>，经流、连接器、API、MCP 真正做了几次动作。<b>Runtime</b>，编排器跑了多久、迭代了几轮。<span class=\"pz\">⏸ 停 2 秒</span>拿下面这个例子感受一下——一次<b>发票稽核</b>：读票加判断调了 3 次模型；检索了报销政策和历史；查采购单、写审批，2 次动作；拆成 4 步迭代到完成。<b>四项相加，就是这一单的 Credits</b>。<span class=\"pz\">⏸ 停 2 秒</span>但我真正想说的不是算法，而是<b>这种算法带来了什么</b>。<span class=\"pz\">⏸ 停 2 秒</span>第一，<b>成本和价值是对齐的</b>。简单任务扣得少、复杂任务扣得多——<b>按真实工作量收，而不是每人每月一个固定价</b>。这意味着：<b>你不会为不用的人付钱</b>。<span class=\"pz\">⏸ 停 2 秒</span>第二，<b>它让你能先小后大</b>。不用一上来就为全公司买一大笔许可，<b>先拿一个场景跑一个月</b>，看清楚实际消耗，<b>算出它到底省了多少人工</b>，再决定要不要推开。这对采购来说是好事——<b>ROI 是算得出来的，不是拍脑袋的</b>。<span class=\"pz\">⏸ 停 2 秒</span>第三，<b>它把优化的主动权交给了你</b>。四个因素都是看得见的，所以你可以主动调：简单场景换便宜的模型、把能写死的步骤从 Agent 挪到 Workflow、减少不必要的检索范围。<b>这些优化是直接变成钱的</b>。<span class=\"pz\">⏸ 停 2 秒</span>所以我的看法是：<b>按用量计费不是一个需要接受的代价，它本身就是一个可以用来控成本的工具</b>。<span class=\"pz\">⏸ 停 1 秒</span>当然前提是得管得住——下一页就是管的办法。" }, "govern-spend": { "t": "23 · 50 秒 · 消顾虑", "h": ["抓：直面「会不会失控」", "立：三层收口", "带：一屏看全"], "n": "讲到这儿，一定有人心里在想一句话：<b>那会不会用着用着就失控了？</b><span class=\"pz\">⏸ 停 3 秒 · 让这个担心浮出来</span>这页就是答案——<b>从租户池一层层收口到单个 Agent</b>。<span class=\"pz\">⏸ 停 1 秒</span>第一层，<b>租户级 Credit 池</b>，全公司共用。买法有三种：预付一年买断量大有折扣、PAYG 用多少付多少、或者混合——<b>预付打底，超了自动转 PAYG</b>。<span class=\"pz\">⏸ 停 2 秒</span>第二层，<b>环境级预留</b>。给部门或项目圈一块容量，<b>圈完就隔离——别的环境吃不到，也吃不光你的</b>。<span class=\"pz\">⏸ 停 2 秒</span>第三层，<b>Agent 级上限</b>。单个 Agent 设 Credit 天花板，<b>360 度看清谁在烧钱，超限自动告警或者关停</b>。<span class=\"pz\">⏸ 停 2 秒</span>所有这些在 Licensing Hub 里<b>一屏看全</b>：账单计划、预付余额对已消耗、PAYG 支出、趋势和 Top 消耗方。<span class=\"pz\">⏸ 停 1 秒</span>所以答案是：<b>不会失控，因为它有三层闸门</b>。" }, "faq": { "t": "FAQ · 90 秒 · 可跳可展开", "h": ["立：六个必问题", "带：前三个必说", "收：没动你们已有的东西"], "n": "这一页是我把每场都会被问到的六个问题，<b>提前答一遍</b>。如果时间紧，<b>只说前三个就够了</b>。<span class=\"pz\">⏸ 停 2 秒</span><b>Q1，已买的 License 会不会变？</b>不会。Chat 和 Standard 的商业模式完全维持原样，<b>你现在建的、跑的、连的连接器，一分钱不变</b>。<span class=\"pz\">⏸ 停 2 秒</span><b>Q2，要不要再买一份新的？</b>不需要。GHCP harness <b>不是另一个产品</b>，它是 Studio 内部换上的引擎；你要做的只是<b>准备 Credit 容量</b>。<span class=\"pz\">⏸ 停 2 秒</span><b>Q3，老 Agent 会不会坏？</b>不会，也不会被强制迁移。它们继续跑在原来的 harness 上，<b>新的是并存的第三条路</b>。<span class=\"pz\">⏸ 停 2 秒</span>后面三个看现场：自带模型挂在 Workflow 层；成本靠双层额度管住；扣费分建和跑两段，<b>手动搭建不扣费</b>。<span class=\"pz\">⏸ 停 3 秒</span>最后那句话是我最想你们带走的：<b>这次升级没有动任何人已经买的东西，它只是多给了你一条能接更复杂业务的路</b>——要不要走、走多少，完全由你控制。" }, "close": { "t": "收尾 · 40 秒", "h": ["收：三句话", "转：把话交回去"], "n": "今天讲了不少，如果你只带走三句话，就这三句。<span class=\"pz\">⏸ 停 2 秒</span>第一，<b>三条 harness 并存，按需求挑</b>。路径能写死的走 Chat 或 Standard——<b>商业模式不变</b>；写不死、要临场判断的，才走 GitHub Copilot harness。<span class=\"pz\">⏸ 停 2 秒</span>第二，<b>一个 Studio 建三件套</b>。Agent 管判断、Workflow 管确定执行、App 管人来操作，<b>用自然语言一起建</b>。<span class=\"pz\">⏸ 停 2 秒</span>第三，<b>更强来自 GHCP harness，成本按用量四因素算</b>。质量加 20%、token 降 45%、比竞品高 29 个点；花费用<b>环境级加 Agent 级双层额度管住</b>。<span class=\"pz\">⏸ 停 3 秒 · 完整停顿，不要抢话</span>就到这里。<b>大家有什么问题？</b>" } };
+            var NOTES = { "cover": { "t": "开场 · 45 秒", "h": ["抓：先把今天的落点说死", "立：只回答 4 个问题", "转：交代四段结构"], "n": "各位好。今天这一场，我不打算把 Copilot Studio 的功能从头念一遍。<span class=\"pz\">⏸ 停 2 秒</span>你们看屏幕上——<b>这一场我只回答 4 个问题</b>。<span class=\"pz\">⏸ 停 1 秒</span>第一，<b>Copilot Studio 做了哪些核心的改变</b>；第二，<b>面对多任务和复杂任务，它有哪些提升、对应什么定位</b>；第三，<b>它的功能和路线图长什么样</b>；第四，<b>怎么收费、成本怎么管</b>。<span class=\"pz\">⏸ 停 2 秒</span>把这 4 个问题讲清楚，你就能判断该不该上、怎么用。<span class=\"pz\">⏸ 停 1 秒</span>而贯穿全场的一句主线是：Copilot Studio 现在<b>三条 harness 并存，不是新的取代旧的，而是一个需求进来、按它的性质去挑</b>。这 4 个问题，正好对应后面的四段。" }, "why-now": { "t": "01 · 60 秒", "h": ["抓：从人的需求变化切入", "立：AI assistant → AI doer", "转：需求变了，平台必须跟着变"], "n": "先不谈产品，谈一件更根本的事：<b>人对 AI 的期待变了</b>。<span class=\"pz\">⏸ 停 2 秒</span>看这四行。以前数据各自孤立，现在要打通；以前是以单个应用为中心，现在是互联的工作系统；以前每一步都要人来协调，现在是人和 Agent 一起干。<span class=\"pz\">⏸ 停 1 秒</span>但真正的分水岭是中间这一行——<b>AI 从「助手」变成「执行者」</b>。从 AI assistant 到 AI doer。<span class=\"pz\">⏸ 停 3 秒 · 让这句话落地</span>这一个字的差别，代价非常大。回答问题，模型自己就够了；<b>接手工作，就得会规划、会调工具、跑错了还能自己爬起来</b>。<span class=\"pz\">⏸ 停 1 秒</span>需求变了，AI 的工作模式跟着变，那么<b>造 Agent 的平台也必须换引擎</b>——这就是今天要讲的全部背景。" }, "one-studio": { "t": "02 · 75 秒 · 讲清为什么要三件套", "h": ["抓：为什么不能只有 Agent", "立：判断要落到系统里", "证：竞品的路线选择", "转：现场演示"], "n": "那么升级后的 Copilot Studio 长什么样？一句话：<b>一个 Studio，一次对话，三样一起建</b>。<span class=\"pz\">⏸ 停 2 秒</span>但我更想先回答一个问题——<b>为什么非要有 Workflow 和 App？只有 Agent 不行吗？</b><span class=\"pz\">⏸ 停 2 秒</span>我的看法是这样：<b>Agent 解决的是「判断」，但判断完了，得落到系统里</b>。它想通了这张发票有问题，接下来呢？要写进财务系统、要发审批、要有人点确认。<b>这一步过去全靠写代码</b>。<span class=\"pz\">⏸ 停 2 秒</span>所以三件套其实是一条完整链路：<b>Agent 管判断，Workflow 管确定执行，App 管人机交互</b>——判断、执行、确认，缺一环这件事就跑不完。<span class=\"pz\">⏸ 停 2 秒</span>说到这儿，可以看看行业里另外两家怎么做的。<b>Anthropic 走的是 MCP 加 SDK</b>，工具能接，但编排逻辑基本靠开发者写代码；<b>OpenAI 更值得一提</b>——他们做过一个可视化的 Agent Builder，但已经官宣<b>今年 11 月 30 日停用</b>，让大家回到 Agents SDK，也就是回到写代码。<span class=\"pz\">⏸ 停 3 秒 · 让这个信息落地</span>这说明什么？<b>说明「编排」这一层是真的难做</b>。<span class=\"pz\">⏸ 停 1 秒</span>而我们的选择不太一样：把编排做成<b>可视化的 Workflow，直接拖 1600 多个现成连接器</b>——SAP、SharePoint、Teams、ServiceNow，业务人员自己就能接上，不用每个集成都找开发排期。<span class=\"pz\">⏸ 停 2 秒</span>所以这不是谁强谁弱的问题，<b>是面向的人不一样</b>：他们把能力交给开发者，我们想把它交到<b>懂业务的人</b>手里。<span class=\"pz\">⏸ 停 2 秒</span>这句话说得再好，不如看一眼。" }, "demo": { "t": "03 · Demo + 实证 · 60 秒 + 视频", "h": ["抓：交出主动权", "带：四个观察点", "证：看完马上给数据", "转：进入 harness 解释"], "n": "接下来这段我少说，<b>你们自己看</b>。<span class=\"pz\">⏸ 停 1 秒</span>看的时候留意四件事：第一，<b>提需求用的是日常语言</b>，不写代码、不套模板；第二，它<b>自己拆解</b>——理解意图、生成结构、接上数据和逻辑；第三，<b>生成完当场就能试</b>，不满意再说一句就改；第四，最后出来的是<b>三件套互相调用</b>，不是一个孤立的聊天机器人。<span class=\"pz\">⏸ 停 2 秒 · 然后播放</span>……看完了。<span class=\"pz\">⏸ 停 1 秒</span>但 demo 总是好看的，所以我把<b>数据直接放在下面</b>。<span class=\"pz\">⏸ 停 2 秒</span>同一套最难的评估集、同一个零售数据集，做业务流程自动化：<b>我们 94%，领先竞品 65%，高出 29 个点</b>。<span class=\"pz\">⏸ 停 2 秒</span>右边两个数字也值得说：<b>相比今年 3 月的自己提升了 58 个点</b>，半年跨了一大步；而且<b>输入 token 反而降了 45%</b>——<b>质量在涨，成本在降</b>。<span class=\"pz\">⏸ 停 2 秒</span>口径我也说清楚：<b>两边跑的是同一个模型基线 Sonnet 4.6，变量只有 harness</b>；而且这套评估集是<b>刻意压到失败的</b>，65% 已经算强，eval 通过率也不等于生产成功率。<span class=\"pz\">⏸ 停 2 秒</span>那问题就来了——<b>它凭什么能做到这些？</b>这就要说到 harness。" }, "sec-harness": { "t": "Part 01 封面 · 15 秒", "h": ["转场：给听众一张地图"], "n": "第一段，我们把 harness 这件事讲透。<span class=\"pz\">⏸ 停 1 秒</span>三个问题：<b>到底换了哪一层</b>、<b>harness 里面装了哪四样东西</b>、以及<b>一个需求进来该走哪条</b>。" }, "arch-changed": { "t": "04 · 75 秒 · 本段核心", "h": ["抓：只换了一层", "证：架构图", "带：不用另买 License", "转：换了之后能干什么"], "n": "这页是今天技术部分最重要的一张图，我讲慢一点。<span class=\"pz\">⏸ 停 2 秒</span>从 Standard 换到 GitHub Copilot harness，<b>只换了中间的执行引擎，上下两层没动</b>。<span class=\"pz\">⏸ 停 2 秒</span>原来是规则编排：Topics 加 Agent Flow，<b>按你配好的路径走</b>——好处是可预测，代价是<b>遇到你没配过的情况，它就停在那儿</b>。<span class=\"pz\">⏸ 停 1 秒</span>换成 GHCP 之后是 agentic orchestrator：<b>自己规划、自己迭代、跑错自己恢复</b>，而且这个 loop 是在<b>隔离的安全沙箱里跑的</b>，自带文件工具和 Memory、Skills。<span class=\"pz\">⏸ 停 2 秒</span>请特别看<b>没变的部分</b>：上面的渠道接入——Teams、M365 Copilot、Web——还有下面受治理的模型调用，<b>三条 harness 完全一样</b>。所以这不是让你重建一套，是<b>同一个平台里换个更强的引擎</b>。<span class=\"pz\">⏸ 停 3 秒 · 留给下面那条绿色提示</span>最后一句特别重要，几乎每个客户都会问：<b>不用另外买 GitHub Copilot License</b>。它是 Copilot Studio 内置的执行引擎，不是要单独采购的产品——在 Studio 里直接选用，<b>只消耗 Copilot Credits</b>。" }, "unlocks": { "t": "05B · 75 秒 · 能力配数据", "h": ["立：四件以前做不到的事", "证：每条都挂一个数字", "转：那 harness 到底是什么"], "n": "换上它之后，具体多了哪些本事？四条，而且我给<b>每一条都配了数字</b>——因为「更强」这两个字，不给数据就是空话。<span class=\"pz\">⏸ 停 2 秒</span>第一，<b>啃得动复杂流程</b>，把一件大事自己拆成若干步做到完成。数字是：业务流程自动化的评估通过率 <b>94%，比领先竞品高 29 个点</b>。以前呢？一次问答就结束了。<span class=\"pz\">⏸ 停 2 秒</span>第二，<b>跑错了自己恢复</b>，某一步失败会重试或换条路。数字更能说明进步速度：<b>相比今年 3 月的自己，同一套最难评估集提升了 58 个点</b>——半年跨了一大步。<span class=\"pz\">⏸ 停 2 秒</span>第三，<b>工具挑得准</b>，第一次就选对工具、填对参数。Multi-tool 质量 <b>+11.9 个点</b>，File 任务质量 <b>+28.2 个点</b>。<span class=\"pz\">⏸ 停 2 秒</span>第四，也是最反直觉的一条：<b>又稳又省</b>。质量在涨，<b>输入 token 反而降了 45%</b>。<span class=\"pz\">⏸ 停 1 秒</span>为什么能同时做到？因为更听指令就少走弯路，缓存命中高就少重复读——<b>省下来的不是压缩出来的，是不浪费省出来的</b>。<span class=\"pz\">⏸ 停 2 秒</span>这里请一定把口径说清楚：<b>以上全部跑同一个模型基线 Sonnet 4.6，唯一的变量就是 harness</b>。<span class=\"pz\">⏸ 停 1 秒</span>那问题来了——<b>凭什么换个 harness 就能做到这些？</b>下一页把这个词讲清楚。" }, "harness-def": { "t": "06 · 60 秒 · 概念定桩", "h": ["抓：一个比喻", "立：铁轨/沙盒/工具", "转：它不是另一个产品"], "n": "harness 这个词很多人第一次听。我给一个比喻：<b>harness 就是给 AI 铺的铁轨</b>。<span class=\"pz\">⏸ 停 2 秒</span>模型本身像一台有动力的车头——<b>力气很大，但会跑偏</b>。<span class=\"pz\">⏸ 停 1 秒</span>harness 干三件事：第一，<b>铁轨</b>，用软件写出的约束，划定 agentic loop 的边界，不让它乱跑；第二，<b>沙盒</b>，在隔离环境里执行，不误伤真实系统；第三，<b>工具</b>，文件工具加 Memory、Skills 随取随用。<span class=\"pz\">⏸ 停 2 秒</span>装上这套之后，Copilot Studio 就<b>能接长流程、跑错能自己恢复、工具一次挑对</b>。<span class=\"pz\">⏸ 停 1 秒</span>这里再强调一次，因为最容易误解：<b>harness 不是另一个要买的产品</b>，它是 Studio 内部换上的引擎。引擎更强，<b>平台能接的业务就更复杂</b>，仅此而已。" }, "coexist": { "t": "07 · 65 秒 · 关键分流", "h": ["抓：并存不是替代", "立：左右两条路", "转：那在整个家族里的位置呢"], "n": "讲到这里必须澄清一个最常见的误会：<b>GitHub Copilot harness 没有取代 Standard harness</b>。<span class=\"pz\">⏸ 停 2 秒</span>同一个 Studio 里，<b>一个需求进来，分两条路走</b>。<span class=\"pz\">⏸ 停 1 秒</span>左边这条，接<b>规则清楚、路径固定</b>的活。关键词是配置化对话，快而稳——响应你全配好，<b>它不跑推理，所以更快、结果可重复</b>，特别适合合规场景。SharePoint 问答、审批路由、FAQ 客服，都走这条。<span class=\"pz\">⏸ 停 2 秒</span>右边这条，接<b>复杂多变、要 AI 临场判断</b>的活。而且注意，右边<b>不是一个 Agent，是一个平台</b>——Agent 管判断、Workflow 管稳定执行、App 让人来批。读发票、判异常、转审批、一键批，这一整条链都在右边。<span class=\"pz\">⏸ 停 2 秒</span>怎么选，一句话：<b>流程固定要快要稳走左边，任务复杂要临场判断走右边</b>。<b>按任务挑，不是二选一</b>。" }, "who-does-what": { "t": "08 · 65 秒 · 把两个名字分清", "h": ["抓：Microsoft Copilot vs Copilot Studio", "立：一个是买成品，一个是自己造", "转：那平台全景长什么样"], "n": "这里要澄清一个几乎每场都被问到的混淆：<b>Microsoft Copilot 和 Copilot Studio，到底什么关系？</b><span class=\"pz\">⏸ 停 2 秒</span>我用一句话区分：<b>左边是买来就能用的成品，右边是你自己造 Copilot 的地方</b>。<span class=\"pz\">⏸ 停 2 秒</span>左边 <b>Microsoft Copilot</b> 里面有两个形态。要结合几份材料快速拿结论，用 <b>chat</b>，问一句答一句。要把一件跨系统、多步骤的活整个托付出去，用 <b>Microsoft coworker</b>，它像个数字同事替你把活干完。<span class=\"pz\">⏸ 停 1 秒</span>这两个的共同点是：<b>功能是微软定义好的，你按人头买，开箱即用，不需要建任何东西</b>。<span class=\"pz\">⏸ 停 2 秒</span>但成品总有边界。<b>当这件事只有你们公司才这么做的时候，成品就覆盖不到了</b>——你们的审批规则、你们的客户分级、你们的 SAP 字段，微软不可能预置。<span class=\"pz\">⏸ 停 2 秒</span>这时候才轮到右边的 <b>Copilot Studio</b>：业务逻辑、连哪些数据、谁有什么权限，<b>全部由你定义</b>。它给你三件事——能力穿透整个组织，一次建好全公司在 Teams、Web、业务系统里都能用；Agent 可治理，谁建的、连了什么、能做什么动作，随时能盘点和收回；成本可控，环境级加 Agent 级双层额度，超限自动关停。<span class=\"pz\">⏸ 停 2 秒</span>所以请不要把它们当成三个等级去比高低。<b>它们回答的是两个不同的问题：一个是「我想更快」，一个是「我要把公司的流程造出来」</b>。<span class=\"pz\">⏸ 停 1 秒</span>实际上，<b>绝大多数客户是两边同时都有的</b>。" }, "scenario-split": { "t": "尾声 · 60 秒 · 最实用的一页", "h": ["抓：给一把判断尺子", "证：七个真实场景", "收：带着这把尺子回去"], "n": "在收尾之前，我留了<b>今天最实用的一页</b>——<b>给你一把尺子</b>，回去就能用。<span class=\"pz\">⏸ 停 1 秒</span>左边四个是 Standard harness 的典型场景：IT 自助问答、官网客服分流、<b>实时语音客服</b>、报名预约收集。<span class=\"pz\">⏸ 停 1 秒</span>特别提一下语音这个——<b>电话接进来实时应答和转接，低延迟是硬指标</b>，话术和路径事先配好，这类活恰恰不需要 AI 临场想。它们的共同点在最下面这句：<b>能画成一张确定的流程图</b>。<span class=\"pz\">⏸ 停 2 秒</span>右边三个不一样。法务的合同条款分诊、客服的工单分诊与回复、售前的 <b>RFP 标书审阅</b>。注意看每一条：<b>你只给了目标，中间步骤是 AI 自己排的</b>。比如 RFP 审阅，你说的只是「把上百页标书拆成一份风险清单」，通读全文、拆解模块、标风险项、汇总排优先级——<b>这四步是它自己编排的</b>。<span class=\"pz\">⏸ 停 3 秒</span>所以判断标准非常简单，请记住这一句：<b>场景能写成固定流程图，走 Standard；只能说清目标、说不清步骤，才需要 GitHub Copilot harness</b>。" }, "sec-platform": { "t": "Part 02 封面 · 12 秒", "h": ["转场"], "n": "第二段，我们把镜头拉远，看<b>整个平台的全景</b>——它自带哪些企业能力，以及模型和 Agent 生态新在哪里。" }, "governed": { "t": "10 · 75 秒 · 四项能力逐个说透", "h": ["立：上层建什么、下层自带什么", "带：每个模块两句说完", "转：那模型和 Agent 从哪来"], "n": "全景其实就两层。<span class=\"pz\">⏸ 停 1 秒</span>上面是<b>三件套</b>，解决「建什么」：Agent 理解和判断、Workflow 规模化执行、App 让人来操作。<span class=\"pz\">⏸ 停 2 秒</span>下面四项，我一个一个说，<b>每个只说两句</b>。<span class=\"pz\">⏸ 停 1 秒</span><b>Microsoft IQ</b>：第一，它把公司自己的邮件、会议、文件和组织关系喂给每个 Agent；第二，这意味着 <b>Agent 知道「这件事在你们公司是怎么干的」</b>，而不只是一个通用模型。<span class=\"pz\">⏸ 停 2 秒</span><b>模型与 harness</b>：第一，各家最新的 frontier 模型平台帮你接好了；第二，你<b>不用自己管部署、配额和版本升级</b>——这部分运维成本是真金白银。<span class=\"pz\">⏸ 停 2 秒</span><b>Agent 365</b>：第一，全公司建了多少个 Agent、分别连了什么数据，<b>可以盘点和审计</b>；第二，它们有身份、有权限、能被威胁防护监控，<b>出事能随时收回权限</b>。<span class=\"pz\">⏸ 停 2 秒</span><b>成本可控</b>：第一，环境级预留把容量圈死，部门之间不会互相吞食；第二，Agent 级再设天花板，<b>超限自动告警或关停</b>。<span class=\"pz\">⏸ 停 2 秒</span>我想强调的是：<b>这四项都是平台自带的，不需要你另外采购、另外集成，也不会因为换了 harness 就再收你一遍钱</b>。<span class=\"pz\">⏸ 停 1 秒</span>这才是它跟一个单纯 Agent 工具的真正区别。" }, "platform-news": { "t": "12 · 50 秒 · 高频提问点", "h": ["抓：能不能用我自己的模型", "立：Agent 内置 / Workflow 外接", "转：进入能力细节"], "n": "接下来这页专门回答一个<b>几乎每个客户都会问的问题</b>：<b>能不能用我们自己的模型？能不能接我们已经建好的 Agent？</b><span class=\"pz\">⏸ 停 2 秒</span>答案要分两层说，<b>说错了会误导客户</b>。<span class=\"pz\">⏸ 停 1 秒</span>左边，<b>Agent 这一层用的是平台内置的 frontier 模型</b>——GPT、Claude、推理模型，下拉框切换，换模型不用重建 Agent，模型运维平台帮你托底。<span class=\"pz\">⏸ 停 2 秒</span>右边，<b>Workflow 这一层可以往外接</b>。要用 Foundry 目录里的模型——DeepSeek、Llama、Mistral，可以；要调 1P、3P 的 Agent 或者 MCP 工具，也可以，<b>在 Workflow 里当成一个节点调用</b>。<span class=\"pz\">⏸ 停 2 秒</span>所以完整的回答是：<b>能，但落在 Workflow 层</b>。Agent 层保持内置，是<b>为了帮你省掉模型运维的负担</b>——两层配合起来，<b>并没有锁死</b>。" }, "sec-capabilities": { "t": "Part 03 封面 · 12 秒", "h": ["转场"], "n": "第三段，逐个看三件套<b>这次新增了什么本事</b>。<span class=\"pz\">⏸ 停 1 秒</span>顺序是：先 Agent，再 App，最后 Workflow。" }, "agent-files": { "t": "13 · 65 秒 · 重点在下游", "h": ["立：Files 四项新能力", "转：读懂只是第一步", "证：结果要能流进系统"], "n": "先说 Agent 的 Files 能力。左边四项，都已 GA。<span class=\"pz\">⏸ 停 1 秒</span>第一，<b>原生生成</b>——直接产出 Word、Excel、PPT、PDF。第二，<b>大文件分析</b>——上百页一次读完。第三，<b>跨文件比对</b>。第四，<b>Agent 间传文件</b>，形成流水线。<span class=\"pz\">⏸ 停 2 秒</span>但我不希望这一页只被记成「它能读文件」——<b>能读文件这件事，市面上已经不稀奇了</b>。<span class=\"pz\">⏸ 停 2 秒</span>真正的差别在下面这条链上。<b>文件进来、Agent 读并判断、Workflow 写进系统、App 让人拍板</b>。<span class=\"pz\">⏸ 停 1 秒</span>你看第三步和第四步——<b>回写 SAP 或 Dataverse、发起审批、让人只看异常项点确认</b>。<span class=\"pz\">⏸ 停 2 秒</span>如果只做到「读懂」，产出还是一段要人复制粘贴到系统里的文字，<b>省下来的只是阅读时间</b>；接上 Workflow 和 App 之后，<b>它才真正接管了一整段流程</b>。<span class=\"pz\">⏸ 停 2 秒</span>这也是我们把 Files 做成一等公民、而不是一个附加功能的原因——<b>文件通常是业务流程的起点，起点接不住，后面整条链都串不起来</b>。<span class=\"pz\">⏸ 停 1 秒</span>右边是官方真实示例：用户上传两张 PDF 收据，Agent 调用 analyzing-pdf 技能解析并跨账户对账。<span class=\"pz\">⏸ 停 1 秒</span>下一页，我用一个更大的例子给你们看实拍。" }, "agent-files-demo": { "t": "13B · 40 秒 · 实拍分步", "h": ["带：按 ↓ 切换画面", "证：单份深读 → 多份汇总", "收：人只做最后判断"], "n": "这就是刚才说的能力，用一个招标文件的例子看真实界面。我不一次性全铺出来，<b>一步一步给你看</b>。<span class=\"pz\">⏸ 停 1 秒</span>先看这张——<b>单份深读</b>：整份招标文件读进去，自动拆成 9 大模块，每条发现都挂着风险标签。<span class=\"pz\">⏸ 停 3 秒 · 让听众看清这张图</span>按一下 ↓——画面切到<b>多份汇总</b>：多个文档的高风险项和置信度，一屏看全，直接排优先级。<span class=\"pz\">⏸ 停 3 秒</span>所以人做什么？<b>只做最后判断</b>——确认高风险、拍板取舍，不再逐页人肉啃。这，就是大文件能力真正改变的东西。" }, "agent-files-OLD": { "t": "obsolete", "h": [], "n": "" }, "agent-loop": { "t": "14 · 35 秒", "h": ["立：loop 四步", "带：Hooks 是治理钩子"], "n": "刚才反复提到的 agentic loop，这页拆成四步。<span class=\"pz\">⏸ 停 1 秒</span>第一，<b>自己规划步骤</b>——拿到任务先想清楚要几步，而不是一次性硬答。第二，<b>工具挑得更准</b>。第三，<b>递归执行到完成</b>——一轮不够就再来一轮。<span class=\"pz\">⏸ 停 2 秒</span>第四条对做治理的人特别重要：<b>Hooks</b>，可以在关键节点插入<b>你自己的校验、日志或安全扫描</b>。这条目前是 Preview。" }, "app-build": { "t": "15 · 40 秒", "h": ["抓：一句话生成 App", "证：截图里的 200 credits"], "n": "第二件套，App。<span class=\"pz\">⏸ 停 1 秒</span>「帮我建一个入职引导 App」——一句话，<b>屏幕、数据、逻辑一起生成，一分多钟出结果</b>。<span class=\"pz\">⏸ 停 2 秒</span>但它不是空壳模板：通过 Work IQ 拿到<b>组织的人、内容和流程上下文</b>；而且连得上业务系统——Agent、Workflow，还有一千六百多个连接器。<span class=\"pz\">⏸ 停 1 秒</span>最后一条是给 IT 的定心丸：<b>建好的 App 跑在托管宿主里，部署、运行、治理都是企业级的</b>。<span class=\"pz\">⏸ 停 1 秒</span>顺便看右图左下角，写着<b>「用了 200 credits」</b>——<b>成本当场就是透明的</b>，这一点等下讲计费还会回来。" }, "workflow-canvas": { "t": "16 · 50 秒 · 实拍页", "h": ["立：确定 + 判断混编", "证：发票分类实拍", "转：那新节点有哪些"], "n": "第三件套，Workflow。这是一张<b>真实的发票分类流程</b>。<span class=\"pz\">⏸ 停 2 秒</span>跟着走一遍：发票邮件到达触发；<b>Extract 从 PDF 里读金额、类别、日期</b>；<b>Classify 按金额与合规分三支</b>。这两步是<b>确定步骤，每次都一模一样</b>。<span class=\"pz\">⏸ 停 2 秒</span>然后是三个分支——金额合规的直接报、超政策上限的转审批、缺票的发邮件请补材料。<b>这三个判断，交给 Agent</b>。<span class=\"pz\">⏸ 停 2 秒</span>这就是那句话的含义：<b>结构化 where needed，AI where valuable</b>——<b>该固定的固定，该判断的才让 AI 判断</b>。<span class=\"pz\">⏸ 停 1 秒</span>另外注意上面标的：新建体验已 GA，<b>节点可以单独测试，失败处可以 Resume</b>。" }, "wf-nodes": { "t": "17 · 40 秒 · 分步", "h": ["带：按 ↓ 四个节点逐个登场", "立：四个新节点", "收：合起来解决一件事"], "n": "Workflow 这次新增四种节点，我<b>一个一个给你看</b>，按 ↓ 推进。<span class=\"pz\">⏸ 停 1 秒 · 按 ↓</span><b>Extract</b>，从 PDF、图片、Office 文件直接抽结构化字段，不用写解析代码。<span class=\"pz\">⏸ 停 1 秒 · 再按 ↓</span><b>Code</b>，流程里插一段 Python 当一步执行。<span class=\"pz\">⏸ 停 1 秒</span><b>Cowork</b>，把跨应用的活直接叫外援去做。<span class=\"pz\">⏸ 停 1 秒</span><b>Resume</b>，跑挂了不用整条重来，修好从失败那步接着跑。<span class=\"pz\">⏸ 停 2 秒</span>这四个合起来其实解决同一件事：<b>让「确定流程」也能处理非结构化输入、复杂计算和意外失败</b>。<span class=\"pz\">⏸ 停 1 秒</span>那它跟 Power Automate 到底怎么选？" }, "vs-power-automate": { "t": "18 · 70 秒 · 销售最容易被问住的一页", "h": ["立：五个维度", "带：三个销售顾虑正面回应", "收：不是替代，是分工"], "n": "这是客户必问的一题，也是<b>我们自己人最容易讲拧的一页</b>，所以我想把几个顾虑直接摊开说。<span class=\"pz\">⏸ 停 2 秒</span>先看表。最适合的场景：Power Automate 是<b>可预测任务的确定自动化</b>；Workflow 是<b>确定编排加 AI 推理的端到端流程</b>。重点看<b>出错处理</b>这一行：<b>Power Automate 整条重跑，Workflow 从失败那一步恢复</b>——长流程里这个差别非常要命。<span class=\"pz\">⏸ 停 2 秒</span>下面是三个顾虑，我们自己心里得有底。<span class=\"pz\">⏸ 停 1 秒</span><b>顾虑一：这是不是要把客户的 Power Automate 投资否掉？</b>不是，而且这句话必须主动说。客户过去建的流程<b>一个都不用动</b>，步骤固定、不需要 AI 判断的活，<b>继续留给 Power Automate</b>——它更成熟、连接器最多、运维成本最低。<span class=\"pz\">⏸ 停 2 秒</span><b>顾虑二：客户会不会觉得“又要多花一笔钱”？</b>关键在口径。<b>不要说“换成 Workflow”，要说“在原来跑不通的那段上补一块”</b>。客户真正付钱的，是那些以前<b>根本自动化不了、只能人工干</b>的环节。<span class=\"pz\">⏸ 停 2 秒</span><b>顾虑三：客户问“那我以后到底用哪个”。</b>给一句话就行：<b>流程能画出来就用 Power Automate，画不出来才用 Workflow</b>。<span class=\"pz\">⏸ 停 2 秒</span>而且最重要的一点：<b>两者可以互相调用</b>。不是二选一，是一条链上的两段分工。" }, "sec-billing": { "t": "Part 04 封面 · 20 秒", "h": ["转场：主动讲清成本结构"], "n": "最后一段，我们谈<b>成本模型</b>。<span class=\"pz\">⏸ 停 2 秒</span>我不会回避这一段。<b>计费口径本身就是产品设计的一部分</b>，把它讲清楚，你们才能判断这件事值不值得做。<span class=\"pz\">⏸ 停 2 秒</span>这一段分四层：先对齐<b>三条 harness 的计费差异</b>，再看<b>官方逐项明细</b>，然后是<b>一次任务的 Credits 计算口径</b>，最后是<b>双层额度与支出管控机制</b>。<span class=\"pz\">⏸ 停 1 秒</span>先把结论放在前面：<b>你们现有的投资不受影响，新的计费只针对新选择的能力</b>。" }, "three-harness": { "t": "19 · 45 秒", "h": ["立：三条并存", "带：左二不变、右一新增"], "n": "先把三条 harness 的能力和计费<b>放在一张表里对齐</b>。<span class=\"pz\">⏸ 停 2 秒</span>上半部分是能力。左边两条你们已经熟了。重点看最右边：<b>最新 Chat 加推理模型、Skills 和 Memory、内置 AI Workflows</b>，还有<b>agentic loop</b>和深度推理加 Work IQ。<span class=\"pz\">⏸ 停 2 秒</span>下半部分是计费，我只要你记住<b>一句对比</b>：<span class=\"pz\">⏸ 停 1 秒</span>左边两条，<b>含在 M365 Copilot 许可内或者按消耗——商业模式不变</b>；最右边这条，<b>建和跑都按用量计费</b>。<span class=\"pz\">⏸ 停 2 秒</span>至于具体哪些收费、哪些不收费，下一页有官方的逐项明细。" }, "billing-detail": { "t": "20 · 60 秒 · 官方明细", "h": ["立：你已买的没变", "带：分三组 + 三条脚注", "收：只有 GHCP 建/跑变了"], "n": "这是官方 Billing details 的中文版，我原样搬过来。<span class=\"pz\">⏸ 停 1 秒</span>但在看表之前，我想先把最要紧的一句话说在前面——<b>你们现在手上的 Copilot Studio License，功能一点没变，计费也一点没变</b>。<span class=\"pz\">⏸ 停 2 秒</span>对应到表上就是左边这两列：<b>Chat harness 和 Standard harness，商业模式完全维持原样</b>。你之前怎么建、怎么跑、怎么付钱，今天还是那样。<span class=\"pz\">⏸ 停 2 秒</span>那什么时候会变？只有当你要处理<b>更灵活、更复杂的业务流程</b>，主动选择 GitHub Copilot harness 的时候——也就是最右边这一列。<span class=\"pz\">⏸ 停 1 秒</span>而且它的变化分两段，<b>建的时候和跑的时候都会算</b>。<span class=\"pz\">⏸ 停 2 秒</span>先看第一组，<b>建 Agent</b>。请注意这一行：<b>手动搭建，三条 harness 全都不计费</b>——你在画布上点选、连数据、改设置，一分钱不花。变的是下面三项：自然语言搭建、评估、测试面板，<b>只有 GHCP 这一列按用量计费</b>。为什么？因为这三件事本身就在真实调用模型和工具，它是有算力成本的。<span class=\"pz\">⏸ 停 2 秒</span>第二组，<b>跑 Agent</b>。左边两列规则照旧——有 M365 Copilot 许可的用户合理使用不计费，外部渠道走公开费率表。最右边不区分身份，<b>一律按用量</b>。<span class=\"pz\">⏸ 停 2 秒</span>第三组是<b>配套能力</b>，这组我觉得是最容易被忽略的好消息：连接器、本地数据网关、Dataverse、托管环境、管理中心——<b>三条 harness 基本都不额外收费</b>。也就是说，<b>你为了治理和集成付出的那些基础设施，不会因为换了 harness 就再收你一遍钱</b>。<span class=\"pz\">⏸ 停 2 秒</span>下面三条小字是官方脚注，我也翻译过来了：Dataverse 默认自带 15 GB 数据库、20 GB 文件、2 GB 日志，超了才按 1 GB 加购；托管环境按官方许可说明走，而且这里只针对 Copilot Studio 相关功能启用。<span class=\"pz\">⏸ 停 2 秒</span>所以这张表真正的结论只有一句：<b>旧的一切照旧，只有你主动选了 GHCP harness 去干更复杂的活，才引入按用量计费</b>。" }, "when-charged": { "t": "21 · 45 秒", "h": ["立：单位和维度都统一", "带：建 vs 跑对称看"], "n": "上一页是「哪些收费」，这一页是「<b>什么时候扣</b>」。<span class=\"pz\">⏸ 停 2 秒</span>先把两件事钉死：<b>计价单位统一是 Copilot Credit，一个 Credit 等于一美分</b>；<b>计价维度统一是 Models、Context、Tools、Runtime 四项</b>。<span class=\"pz\">⏸ 停 2 秒</span><b>建和跑用的是同一套算法，只是发生在不同阶段</b>。<span class=\"pz\">⏸ 停 1 秒</span>建的阶段：自然语言构建、评估、测试面板要扣——因为<b>这几件事本身就在跑模型和工具</b>。而<b>手动搭建不扣</b>：点选、连数据、改设置，一分钱不花。<span class=\"pz\">⏸ 停 2 秒</span>跑的阶段：用户真的把任务交给它执行才扣。连接器和管理动作<b>不扣</b>。<span class=\"pz\">⏸ 停 1 秒</span>再强调一次边界：<b>只有 GitHub Copilot harness 这样算</b>。" }, "billing-factors": { "t": "22 · 70 秒 · 为什么这么计费才合理", "h": ["立：四因素", "证：发票稽核例子", "收：灵活性带来成本控制与 ROI"], "n": "四个因素展开讲。<span class=\"pz\">⏸ 停 1 秒</span><b>Models</b>，这次任务调了几次模型、用的哪个——越强的模型单价越高。<b>Context</b>，为了答准检索了多少组织数据。<b>Tools</b>，经流、连接器、API、MCP 真正做了几次动作。<b>Runtime</b>，编排器跑了多久、迭代了几轮。<span class=\"pz\">⏸ 停 2 秒</span>拿下面这个例子感受一下——一次<b>发票稽核</b>：读票加判断调了 3 次模型；检索了报销政策和历史；查采购单、写审批，2 次动作；拆成 4 步迭代到完成。<b>四项相加，就是这一单的 Credits</b>。<span class=\"pz\">⏸ 停 2 秒</span>但我真正想说的不是算法，而是<b>这种算法带来了什么</b>。<span class=\"pz\">⏸ 停 2 秒</span>第一，<b>成本和价值是对齐的</b>。简单任务扣得少、复杂任务扣得多——<b>按真实工作量收，而不是每人每月一个固定价</b>。这意味着：<b>你不会为不用的人付钱</b>。<span class=\"pz\">⏸ 停 2 秒</span>第二，<b>它让你能先小后大</b>。不用一上来就为全公司买一大笔许可，<b>先拿一个场景跑一个月</b>，看清楚实际消耗，<b>算出它到底省了多少人工</b>，再决定要不要推开。这对采购来说是好事——<b>ROI 是算得出来的，不是拍脑袋的</b>。<span class=\"pz\">⏸ 停 2 秒</span>第三，<b>它把优化的主动权交给了你</b>。四个因素都是看得见的，所以你可以主动调：简单场景换便宜的模型、把能写死的步骤从 Agent 挪到 Workflow、减少不必要的检索范围。<b>这些优化是直接变成钱的</b>。<span class=\"pz\">⏸ 停 2 秒</span>所以我的看法是：<b>按用量计费不是一个需要接受的代价，它本身就是一个可以用来控成本的工具</b>。<span class=\"pz\">⏸ 停 1 秒</span>当然前提是得管得住——下一页就是管的办法。" }, "govern-spend": { "t": "23 · 50 秒 · 消顾虑", "h": ["抓：直面「会不会失控」", "立：三层收口", "带：一屏看全"], "n": "讲到这儿，一定有人心里在想一句话：<b>那会不会用着用着就失控了？</b><span class=\"pz\">⏸ 停 3 秒 · 让这个担心浮出来</span>这页就是答案——<b>从租户池一层层收口到单个 Agent</b>。<span class=\"pz\">⏸ 停 1 秒</span>第一层，<b>租户级 Credit 池</b>，全公司共用。买法有三种：预付一年买断量大有折扣、PAYG 用多少付多少、或者混合——<b>预付打底，超了自动转 PAYG</b>。<span class=\"pz\">⏸ 停 2 秒</span>第二层，<b>环境级预留</b>。给部门或项目圈一块容量，<b>圈完就隔离——别的环境吃不到，也吃不光你的</b>。<span class=\"pz\">⏸ 停 2 秒</span>第三层，<b>Agent 级上限</b>。单个 Agent 设 Credit 天花板，<b>360 度看清谁在烧钱，超限自动告警或者关停</b>。<span class=\"pz\">⏸ 停 2 秒</span>所有这些在 Licensing Hub 里<b>一屏看全</b>：账单计划、预付余额对已消耗、PAYG 支出、趋势和 Top 消耗方。<span class=\"pz\">⏸ 停 1 秒</span>所以答案是：<b>不会失控，因为它有三层闸门</b>。" }, "faq": { "t": "FAQ · 90 秒 · 可跳可展开", "h": ["立：六个必问题", "带：前三个必说", "收：没动你们已有的东西"], "n": "这一页是我把每场都会被问到的六个问题，<b>提前答一遍</b>。如果时间紧，<b>只说前三个就够了</b>。<span class=\"pz\">⏸ 停 2 秒</span><b>Q1，已买的 License 会不会变？</b>不会。Chat 和 Standard 的商业模式完全维持原样，<b>你现在建的、跑的、连的连接器，一分钱不变</b>。<span class=\"pz\">⏸ 停 2 秒</span><b>Q2，要不要再买一份新的？</b>不需要。GHCP harness <b>不是另一个产品</b>，它是 Studio 内部换上的引擎；你要做的只是<b>准备 Credit 容量</b>。<span class=\"pz\">⏸ 停 2 秒</span><b>Q3，老 Agent 会不会坏？</b>不会，也不会被强制迁移。它们继续跑在原来的 harness 上，<b>新的是并存的第三条路</b>。<span class=\"pz\">⏸ 停 2 秒</span>后面三个看现场：自带模型挂在 Workflow 层；成本靠双层额度管住；扣费分建和跑两段，<b>手动搭建不扣费</b>。<span class=\"pz\">⏸ 停 3 秒</span>最后那句话是我最想你们带走的：<b>这次升级没有动任何人已经买的东西，它只是多给了你一条能接更复杂业务的路</b>——要不要走、走多少，完全由你控制。" }, "close": { "t": "收尾 · 40 秒", "h": ["收：三句话", "转：把话交回去"], "n": "今天讲了不少，如果你只带走三句话，就这三句。<span class=\"pz\">⏸ 停 2 秒</span>第一，<b>三条 harness 并存，按需求挑</b>。路径能写死的走 Chat 或 Standard——<b>商业模式不变</b>；写不死、要临场判断的，才走 GitHub Copilot harness。<span class=\"pz\">⏸ 停 2 秒</span>第二，<b>一个 Studio 建三件套</b>。Agent 管判断、Workflow 管确定执行、App 管人来操作，<b>用自然语言一起建</b>。<span class=\"pz\">⏸ 停 2 秒</span>第三，<b>更强来自 GHCP harness，成本按用量四因素算</b>。质量加 20%、token 降 45%、比竞品高 29 个点；花费用<b>环境级加 Agent 级双层额度管住</b>。<span class=\"pz\">⏸ 停 3 秒 · 完整停顿，不要抢话</span>就到这里。<b>大家有什么问题？</b>" } };
             var FILE = location.pathname;
             var slides = [].slice.call(document.querySelectorAll('.slide'));
             var keys = slides.map(function (s) { return s.dataset.key; });
