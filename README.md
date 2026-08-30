@@ -8,7 +8,7 @@ Curated briefings and resources on **Microsoft Power Platform** and the **Copilo
 
 | Resource | Format | Language | Link |
 |---|---|---|---|
-| **Copilot Studio — Full Picture** (as of 2026-08) | 29-slide deck, ~40 min | 简体中文 | [Open](https://zaz8848.github.io/power-platform-frontier/decks/copilot-studio-2026-08/) |
+| **Copilot Studio — Full Picture** (as of 2026-08) | 29-slide deck, ~40 min | 简体中文 | [Open](https://zaz8848.github.io/power-platform-frontier/decks/copilot-studio-full-picture/) |
 
 More resources will be added over time.
 
@@ -45,7 +45,7 @@ Presenter mode includes **paced speaker notes** with suggested pause points (⏸
 ```
 index.html                              Landing page — index of all resources
 decks/
-  copilot-studio-2026-08/
+  copilot-studio-full-picture/
     index.html                          Self-contained deck (styles, scripts, images inlined)
     demo-copilot-studio.mp4             Product demo clip used on the DEMO slide
 ```
